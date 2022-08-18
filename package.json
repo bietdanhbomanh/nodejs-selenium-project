@@ -1,0 +1,30 @@
+{
+    "name": "match_crawl",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "nodemon test.js",
+        "dev": "nodemon index.js",
+        "start": "node index.js --production",
+        "keonhacaipc": "node --experimental-modules --es-module-specifier-resolution=node ./crawl/keonhacaipc.js",
+        "keonhacaimobile": "node --experimental-modules --es-module-specifier-resolution=node ./crawl/keonhacaimobile.js",
+        "keocacuoc": "node --experimental-modules --es-module-specifier-resolution=node ./crawl/keocacuoc.js",
+        "crawl": "npm run keocacuoc & npm run keonhacaimobile & npm run keonhacaipc"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cheerio": "^1.0.0-rc.12",
+        "ejs": "^3.1.8",
+        "express": "^4.18.1",
+        "http": "^0.0.1-security",
+        "mysql": "^2.18.1",
+        "selenium-webdriver": "^4.3.1",
+        "socket.io": "^4.5.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.19"
+    }
+}

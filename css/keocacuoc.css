@@ -1,0 +1,1468 @@
+[data-view='asiaview'] .c-icon:not(.c-gc-icon)::before,
+[data-view='asiaview'] .c-league__btn-favorite::before {
+    font-family: iconfont-classic;
+}
+[data-view*='asiaview'] .c-btn--more.c-icon--caret::before,
+[data-view*='asiaview'] [data-view='asiaview2022'] .c-btn--more.c-dropdown__btn::after,
+[data-view*='asiaview']
+    [data-view='asiaview2022']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    .c-streaming-list
+    > a.c-btn--more::before,
+[data-view*='asiaview'] [data-view='asiaview'] .c-btn--more.c-dropdown__btn::after,
+[data-view*='asiaview'] .c-team--pointer,
+[data-view*='asiaview'] button {
+    cursor: pointer;
+}
+[data-view*='asiaview'] button,
+[data-view='asiaview'] .c-odds-button > .c-odds:empty {
+    background-color: transparent;
+}
+[data-view*='asiaview'] .c-btn.c-is-disabled,
+[data-view*='asiaview'] .c-btn[data-disabled='true'],
+[data-view='asiaview'] .c-odds-button[data-odds-status='close-price'],
+[data-view='asiaview'] .c-odds-button[data-odds-status='close'] {
+    cursor: default;
+    pointer-events: none;
+}
+*,
+::after,
+::before,
+[data-view='asiaview'] .c-btn {
+    box-sizing: border-box;
+}
+[data-view='asiaview'],
+html:root {
+    --c-av-match-timer-w: 76px;
+}
+:root {
+    --data-image-arrowCircle-up: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuWcluWxpF8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjIwcHgiIGhlaWdodD0iMjBweCIgdmlld0JveD0iNiAwIDIwIDIwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDYgMCAyMCAyMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8dGl0bGU+YXJyb3dMaW5lV2l0aENpcmNsZV91cDwvdGl0bGU+DQo8Zz4NCgk8cGF0aCBkPSJNMjAuMzYxLDEyLjEwNmMwLjE1OSwwLjE2MSwwLjQyMiwwLjE2MSwwLjU4MywwYzAuMTYyLTAuMTU5LDAuMTYyLTAuNDE5LDAtMC41NzlMMTYuMjIsNi44NDkNCgkJYy0wLjE2Mi0wLjE2MS0wLjQyMy0wLjE2MS0wLjU4NSwwbC00LjcyNyw0LjY3NmMtMC4xNjEsMC4xNjItMC4xNjEsMC40MjIsMCwwLjU4YzAuMTYyLDAuMTYsMC40MjUsMC4xNiwwLjU4NSwwbDQuNDM0LTQuMjY4DQoJCUwyMC4zNjEsMTIuMTA2TDIwLjM2MSwxMi4xMDZ6Ii8+DQoJPHBhdGggZD0iTTE1Ljk5OSwxOUMxMS4wMzcsMTksNywxNC45NjEsNyw5Ljk5OXM0LjAzNy05LDguOTk5LTlTMjUsNS4wMzgsMjUsOS45OTlDMjUsMTQuOTU5LDIwLjk2MSwxOSwxNS45OTksMTl6IE0xNS45OTksMS44OTYNCgkJYy00LjQ2OCwwLTguMTAzLDMuNjM0LTguMTAzLDguMTAzYzAsNC40NjgsMy42MzQsOC4xMDQsOC4xMDMsOC4xMDRjNC40NjgsMCw4LjEwMS0zLjYzNiw4LjEwMS04LjEwNA0KCQlDMjQuMSw1LjUzLDIwLjQ2OCwxLjg5NiwxNS45OTksMS44OTZ6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==');
+    --data-image-arrowCircle-down: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuWcluWxpF8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjIwcHgiIGhlaWdodD0iMjBweCIgdmlld0JveD0iNiAwIDIwIDIwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDYgMCAyMCAyMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8dGl0bGU+YXJyb3dMaW5lV2l0aENpcmNsZV9kb3duPC90aXRsZT4NCjxnPg0KCTxwYXRoIGQ9Ik0yMC4zNjIsNy44OTRjMC4xNi0wLjE2LDAuNDIzLTAuMTYsMC41ODMsMGMwLjE2MywwLjE1OSwwLjE2MywwLjQyLDAsMC41OGwtNC43MjUsNC42NzhjLTAuMTYyLDAuMTYtMC40MjQsMC4xNi0wLjU4NSwwDQoJCWwtNC43MjctNC42NzdjLTAuMTYxLTAuMTYxLTAuMTYxLTAuNDIyLDAtMC41NzljMC4xNjItMC4xNiwwLjQyNS0wLjE2LDAuNTg1LDBsNC40MzQsNC4yNjdMMjAuMzYyLDcuODk0TDIwLjM2Miw3Ljg5NHoiLz4NCgk8cGF0aCBkPSJNMTUuOTk5LDFDMTEuMDM3LDEsNyw1LjAzOSw3LDEwLjAwMVMxMS4wMzcsMTksMTUuOTk5LDE5QzIwLjk2MiwxOSwyNSwxNC45NjIsMjUsMTAuMDAxUzIwLjk2MiwxLDE1Ljk5OSwxeg0KCQkgTTE1Ljk5OSwxOC4xMDRjLTQuNDY4LDAtOC4xMDMtMy42MzUtOC4xMDMtOC4xMDRzMy42MzQtOC4xMDQsOC4xMDMtOC4xMDRzOC4xMDIsMy42MzYsOC4xMDIsOC4xMDRTMjAuNDY5LDE4LjEwNCwxNS45OTksMTguMTA0eiINCgkJLz4NCjwvZz4NCjwvc3ZnPg0K');
+    --data-image-limit-earth01: url('data:image/svg+xml;base64,PCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjQzIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgNDMgMzIiPgo8dGl0bGU+ZWFydGgwMTwvdGl0bGU+CjxwYXRoIGQ9Ik0zMS44MTMgMjQuMzc2YzAuMTEtMC4wODYgMC4yMjEtMC4xNzQgMC4zMy0wLjI2MnYtMC40ODZjLTAuMzE0IDAuMjU5LTAuNjM1IDAuNTA5LTAuOTY4IDAuNzQ3aDAuNjM3eiI+PC9wYXRoPgo8cGF0aCBkPSJNMzQuMzk0IDE2LjU4NGMwLjY3Ny0xLjExNSAxLjEzNi0yLjI2OSAxLjM1Ny0zLjQyNCAwLjA1OC0wLjI2NiAwLjA1Ni0wLjMzIDAuMDgyLTAuNTA2IDAuMTI1LTAuOTU4IDAuMDc3LTEuODg1LTAuMTQxLTIuNzY2IDAuMDA2IDAuMDE2IDAuMDEzIDAuMDMyIDAuMDE5IDAuMDQ4LTAuMTA3LTAuNDc3LTAuNDAzLTEuNDc4LTEuMTUyLTIuNjQ4LTIuMDkzLTMuMTU0LTUuMjc4LTUuNDY0LTguOTQxLTYuNDY0LTEuOTU0LTAuNTIyLTQuMDQyLTAuNjY5LTYuMTctMC4zNzQtOC41NDkgMS4xODctMTQuNTE1IDkuMDc4LTEzLjMzIDE3LjYyNnM5LjA3OCAxNC41MTUgMTcuNjI2IDEzLjMzYzAuOTQxLTAuMTMxIDEuODUtMC4zNDIgMi43Mi0wLjYyNy0wLjAwMi0wLjAyMi0wLjAwMy0wLjA0NS0wLjAwMy0wLjA2N3YtMC4wMTNsMC4wMjQtMC44NDhjLTAuMDAzLTAuMDA4LTAuMDA1LTAuMDE0LTAuMDA4LTAuMDIyIDAuMDAzLTAuMDAyIDAuMDA2LTAuMDAyIDAuMDEwLTAuMDAzbDAuMDA4LTAuMjc0Yy0wLjAzNSAwLjAxMy0wLjA3MCAwLjAyNi0wLjEwNiAwLjAzNy0wLjE3My0wLjQ2OS0wLjQwOC0xLjEyMy0wLjY5OS0xLjk1IDAuMjktMC4wOTkgMC41NzktMC4yMDUgMC44NjctMC4zMTdsMC4wMTMtMC40MzRjLTAuMzM2IDAuMTMzLTAuNjc0IDAuMjU4LTEuMDEzIDAuMzcxLTAuMTYyIDAuMDU4LTAuMzkgMC4xMjgtMC41NTggMC4xODEtMi42NTEgMC44MjEtNS41NDIgMS4xNjMtOC4yODYgMC44MjEtMC4xNjgtMC4wMjItMC4yMy0wLjAyOS0wLjU1LTAuMDc4LTIuNjE0LTAuNDE5LTQuNzgyLTEuNDQyLTYuMjc4LTIuOTYyLTAuNTM0LTAuODgyLTAuOTM0LTEuOTQ0LTEuMTI2LTMuMTUyIDEuNTIyIDEuNDg2IDMuNjkzIDIuNDg1IDYuMjk4IDIuODkgMC4yMDYgMC4wMzUgMC40MjEgMC4wNTggMC41MzMgMC4wNzQgMi43MjMgMC4zMzMgNS42MTMtMC4wMDIgOC4yOS0wLjgzMiAwLjIxMy0wLjA2NyAwLjI5Ni0wLjA5NCAwLjU1Ny0wLjE4MSAxLjA5OC0wLjM3MyAyLjE4Ni0wLjg0MiAzLjIzLTEuMzk1IDAuMDExLTAuMjE0IDAuMDQzLTAuNDI0IDAuMDk2LTAuNjI3LTEuMTI2IDAuNjIxLTIuMzA3IDEuMTM4LTMuNDkzIDEuNTM5LTAuNDQyLTEuMjg1LTAuOTAyLTIuNjM4LTEuMzc0LTQuMDI3IDIuNDE2LTAuODIxIDQuODExLTIuMTcgNi42OS0zLjk2IDAuODU2IDEuMjAyIDEuNTgyIDIuMzk3IDIuMTYgMy41NTctMC4xODEgMC4xNzMtMC4zNjggMC4zNDEtMC41NTcgMC41MDcgMC4yMDUgMC4wMjEgMC40MDUgMC4wNjIgMC41OTcgMC4xMjIgMC4wNjEtMC4wNTYgMC4xMjItMC4xMSAwLjE4Mi0wLjE2OCAwLjA5OS0wLjA4OCAwLjI5OS0wLjI5NCAwLjM5Mi0wLjM4NiAwLjczOS0wLjc1MiAxLjM2OC0xLjU0MSAxLjg4NS0yLjM1bDAuMTUyLTAuMjQzek0yNi4xODQgMzAuMzk0Yy0yLjUzNiAwLjczOC00LjkzNiAwLjgxNi03LjA0MiAwLjQxNi0wLjA1NC0wLjAyMS0wLjEwNy0wLjA0NS0wLjE2LTAuMDY5IDIuMzMzIDAuMjQ2IDQuNzY4LTAuMDYxIDYuOTk4LTAuNzUyIDAuMDgyIDAuMTg0IDAuMTQ5IDAuMzE3IDAuMjAyIDAuNDA2ek0yNS4xMzYgMjcuODE2YzAuMzAyIDAuODMyIDAuNTUyIDEuNDgyIDAuNzQ0IDEuOTM2LTIuMzgyIDAuNzM4LTQuOTQ5IDEuMDI3LTcuMzYgMC43MjMtMC41OS0wLjQtMS4xMjYtMS4wMTQtMS41OTctMS44MjcgMi43MjIgMC4zMjYgNS41ODQtMC4wMTYgOC4yMTMtMC44MzJ6TTE2LjM3MyAyOC41NzNjMC40NDggMC43ODEgMC45NiAxLjM4OSAxLjUyNiAxLjgxMS0wLjYzLTAuMTA3LTEuMjM4LTAuMjU4LTEuODEtMC40NDgtMi4xMjYtMC44NzItMy43ODYtMi4wNDgtNS4zMTgtMy42NDggMS40NTYgMS4xNTUgMy4zNzQgMS45MzkgNS42MDIgMi4yODV6TTMyLjAxOCA0Ljc0NmMxLjE1NCAxLjAyNyAyLjE5NCAyLjMyMyAzLjA1MyAzLjg5IDAuNDU4IDEuMTA2IDAuNjE4IDIuMzAxIDAuNDc1IDMuNTUyLTAuNjUxLTEuMDA1LTEuNTAxLTEuOTQyLTIuNTI2LTIuNzkyIDAuMjMyLTEuODEtMC4yMjctMy40OS0xLjMzMS00Ljg4MiAwLjExIDAuMDc1IDAuMjIxIDAuMTUyIDAuMzMgMC4yMzJ6TTMyLjU5MiA5LjA1NGMtMS4wNjktMC44MjEtMi4zMjYtMS41NjMtMy43NTctMi4xODQgMC4xNzQtMS40MDMtMC4yLTIuNzAxLTEuMDg4LTMuNzY2IDEuMTQ5IDAuMTQ5IDIuMjk0IDAuNDgyIDMuMzMzIDEuMDQ2IDEuMjA4IDEuMzc2IDEuNzMgMy4wNzAgMS41MTIgNC45MDZ6TTE3LjYwMyA1LjQ2NmMwLjAwMyAwLjAzOCAwLjAxNiAwLjA3NSAwLjAzNCAwLjEwOS0xLjMyNiAwLjc5Ny0yLjU2OCAxLjc1LTMuNjk2IDIuODM1LTAuNDY2LTAuNTM5LTAuNjYxLTEuMjAyLTAuNTY2LTEuOTIgMS4yNTQtMC40ODYgMi42NzItMC44NDIgNC4yMjktMS4wMjJ6TTEzLjQxNiA2LjI0NmMwLjE0OS0wLjY4MyAwLjU0NC0xLjM2MiAxLjE0Ny0xLjk3MSAwLjk0MiAwLjEzMSAxLjk5IDAuNDQ4IDMuMTE4IDAuOTQxLTAuMDI5IDAuMDM4LTAuMDUwIDAuMDgwLTAuMDY0IDAuMTIyLTEuNDI0IDAuMTMzLTIuODUxIDAuNDIyLTQuMjAyIDAuOTA3ek0xNy43MjIgNS42NjljMC4wMzUgMC4wMjcgMC4wNzcgMC4wNDggMC4xMjMgMC4wNjItMC42MjcgMS4xMzMtMS4xODIgMi40MTYtMS42NTMgMy44MTQtMC44NjYtMC4xNDEtMS41ODYtMC40NzQtMi4wOTAtMC45NjggMS4xMDEtMS4xMSAyLjMxOC0yLjA4OCAzLjYyMS0yLjkwOXpNMTguNTY4IDUuNDkxYzAuMDI5LTAuMDQwIDAuMDUwLTAuMDgwIDAuMDYyLTAuMTIzIDEuNTI1LTAuMTA5IDMuMDc4LTAuMDQ1IDQuNjIxIDAuMTk0LTAuMTMzIDAuNjktMC41MiAxLjM3OS0xLjEyMiAyLTEuMjAzLTAuODM4LTIuNDAyLTEuNTM0LTMuNTYzLTIuMDcwek0yMS45NDQgNy43NDZjLTAuNzAxIDAuNjU4LTEuNTkyIDEuMTYzLTIuNDk2IDEuNDc0LTAuNDM0LTEuMzE1LTAuODIxLTIuNTAxLTEuMTUyLTMuNTIyIDAuMDYyLTAuMDI2IDAuMTI2LTAuMDY0IDAuMTgxLTAuMTA5IDEuMTI2IDAuNTYzIDIuMjkzIDEuMjg4IDMuNDY5IDIuMTU3ek0xOC42NDUgNS4yNDNjLTAuMDAzLTAuMDM3LTAuMDE0LTAuMDcwLTAuMDMwLTAuMTAyIDEuMzQ0LTAuNzQ2IDIuNzI1LTEuMzA2IDQuMTA0LTEuNjY2IDAuNDUxIDAuNTI1IDAuNjQ2IDEuMTY4IDAuNTcgMS44NjQtMS41NTItMC4yMDYtMy4xMTQtMC4yMzctNC42NDItMC4wOTZ6TTE4LjUzMSA1LjA0M2MtMC4wMzUtMC4wMjctMC4wNzUtMC4wNDgtMC4xMjItMC4wNjQgMC42NS0xLjA4MCAxLjM0Ni0xLjk2OCAyLjA2OS0yLjY0NSAwLjg1NiAwLjE0MSAxLjU2OCAwLjQ3MiAyLjA2OSAwLjk2LTEuMzUgMC4zOS0yLjcwMSAwLjk3OC00LjAxNiAxLjc0OXpNMTguMjc3IDQuOTU0Yy0wLjA2Ni0wLjAwMy0wLjEzMyAwLjAwMi0wLjE5NSAwLjAxNi0wLjI1NC0wLjk4Ni0wLjQ1LTEuNzk0LTAuNTgxLTIuNDA2IDAuODU2LTAuMjU2IDEuNzk0LTAuMzcgMi42OTYtMC4yNjktMC42NzUgMC42ODgtMS4zMiAxLjU4Mi0xLjkyIDIuNjU5ek0xOC4xNzEgNS43MzljMC4yODYgMS4wNDUgMC42MjkgMi4yNDMgMS4wMTggMy41NjUtMC45MzggMC4yODYtMS44OSAwLjM3NC0yLjc0MiAwLjI3NyAwLjQzLTEuNDAyIDAuOTQ2LTIuNjg4IDEuNTMxLTMuODI2IDAuMDYxIDAuMDAzIDAuMTI2LTAuMDAyIDAuMTk1LTAuMDE4ek0xNi4yODUgMTAuMTE4YzEuMDEwIDAuMTIgMi4wNzItMC4wMDMgMy4wNTMtMC4zMDIgMC4zOTcgMS4zNDIgMC44MjkgMi43NzggMS4yODYgNC4yNjQtMS43MDcgMC41MjYtMy41NDcgMC43MzktNS4yODIgMC41MjggMC4yMTgtMS41NiAwLjUzNC0zLjA3MCAwLjk0Mi00LjQ5ek0xOS42MTQgOS43MjZjMC45OTgtMC4zNDQgMS45OTItMC45MDQgMi43NzYtMS42NDUgMS4xNjggMC44OTYgMi4zMjIgMS45MTUgMy40MjkgMy4wMjktMS4zMzQgMS4yNjktMy4wNDMgMi4yNDItNC43OTggMi44NDItMC41Mi0xLjU1NS0wLjk5Mi0yLjk3Ni0xLjQwNi00LjIyNnpNMjIuNTg3IDcuODg2YzAuNjY2LTAuNjkgMS4wOTMtMS40NTYgMS4yNC0yLjIyNyAxLjUyNSAwLjI3NyAzLjAxMyAwLjcxOCA0LjQyMiAxLjMxNS0wLjI0MiAxLjMzNC0wLjk4NiAyLjY2OS0yLjE1NCAzLjg2NC0xLjEzMy0xLjA5MS0yLjMxNC0yLjA4My0zLjUxLTIuOTV6TTIzLjg2NCA1LjQyMmMwLjA4OC0wLjc3My0wLjEyMi0xLjQ5LTAuNjA4LTIuMDc4IDEuMzkyLTAuMzEgMi43MTctMC40IDMuOTQxLTAuMzAxIDAuODgzIDEuMDEwIDEuMjYyIDIuMjUzIDEuMTA0IDMuNjAyLTEuNDE0LTAuNTY2LTIuOTA2LTAuOTc4LTQuNDM1LTEuMjI0ek0zMC4xMiAzLjI0MmMwLjE3MSAwLjEzNiAwLjMzNCAwLjI3NSAwLjQ4NiAwLjQxOC0wLjk5LTAuNDc3LTIuMDU4LTAuNzQ3LTMuMTMzLTAuODYxLTAuODY2LTAuODkzLTIuMDY5LTEuNTM4LTMuNTE1LTEuODg2IDIuMzQyIDAuMzM4IDQuNTI1IDEuMjQ4IDYuMTYgMi4zMjh6TTI2LjkyNSAyLjc1N2MtMS4zMDctMC4wNzAtMi42MDggMC4wODUtMy44NDUgMC4zOTQtMC41NDYtMC41NTctMS4zMjgtMC45MzktMi4yNy0xLjExIDAuNzA5LTAuNTkyIDEuNDI5LTAuOTcxIDIuMTQ0LTEuMTI2IDEuNjQ2IDAuMjY0IDMuMDE2IDAuOTAxIDMuOTczIDEuODQyek0yMC45MTQgMC43ODJjMC41MDctMC4wMTEgMS4wMDMgMC4wMDggMS40OCAwLjA1OC0wLjYzNCAwLjIwMi0xLjI2NyAwLjU5LTEuODg1IDEuMTU1LTEuMDIxLTAuMTMzLTIuMDkwLTAuMDExLTMuMDY3IDAuMjgyLTAuMDgyLTAuNDEzLTAuMTIyLTAuNjk2LTAuMTItMC44NDYgMC43MTctMC4yMSAxLjk4Ny0wLjU3IDMuNTkyLTAuNjQ2ek0xNy45NTggNS4wMTBjLTAuMDcwIDAuMDMwLTAuMTMzIDAuMDY3LTAuMTgyIDAuMTA5LTEuMDg2LTAuNTIzLTIuMDk4LTAuODc0LTMuMDA1LTEuMDQyIDAuNzA5LTAuNjQ2IDEuNTg0LTEuMTMgMi40NzItMS40MzIgMC4xNjggMC41NzkgMC40MDggMS4zNzQgMC43MTUgMi4zNjN6TTE2Ljk0OSAxLjU0NmMwLjAzMiAwLjE1NyAwLjEwMiAwLjQzIDAuMjEzIDAuODE4LTEuMDIyIDAuMzQ2LTIuMDI0IDAuOTEtMi44MDYgMS42NDgtMC42OC0wLjA4Ni0xLjQtMC4wNzgtMi4wNTQgMC4xMzggMS4yODgtMS4xNTcgMy4wMDItMi4wMzAgNC42NDYtMi42MDN6TTE0LjEzNiA0LjIyOWMtMC42NTggMC42ODUtMS4wODIgMS40NDYtMS4yMjkgMi4yMTEtMS4yMjIgMC40OTEtMi4zMDYgMS4xMjUtMy4yMjYgMS44ODYgMC4yNzgtMS4zMSAxLjAzNy0yLjYxMyAyLjIwMi0zLjc3OSAwLjY5Ni0wLjMxNSAxLjQ5NC0wLjM3OCAyLjI1NC0wLjMxOHpNMTAuODA2IDUuNDY3Yy0wLjgwOCAxLjAyNi0xLjMzMyAyLjEyMi0xLjUzOSAzLjIyMi0wLjcwNCAwLjY1LTEuMzIzIDEuNDA2LTEuNzg3IDIuMjU5IDAuNzItMS45ODYgMS42ODUtMy43NTQgMy4zMjYtNS40ODJ6TTYuOTU4IDEyLjg1M2MtMC4wNjcgMS43MDYgMC40OTYgMy4yNyAxLjY1MSA0LjU2My0wLjI5NCAxLjI4LTAuMzk0IDIuNTIzLTAuMjk0IDMuNzAyLTAuNjgtMC43ODktMS4xNjYtMS42NzItMS40NDgtMi42My0wLjMwNi0xLjgyOS0wLjM1NS0zLjUyNSAwLjA5MC01LjYzNXpNOS4wOTYgMjQuMTcxYy0wLjAxMS0wLjAxNi0wLjAyMS0wLjAzMi0wLjAzMi0wLjA0OC0wLjM3OC0wLjU3Ni0wLjgtMS4zNDYtMS4wNTEtMS45MTUtMC4zMjYtMC43NDItMC41NjYtMS4zMTgtMC44NTgtMi4zODEgMC4zMDYgMC42NjEgMC43MTUgMS4yOCAxLjIyNCAxLjg0OCAwLjEyMiAwLjg2NCAwLjM1NSAxLjcwMiAwLjcxNyAyLjQ5NnpNOC42ODMgMjEuNTE1Yy0wLjEyMy0xLjE5NS0wLjA0NS0yLjQ2NiAwLjIzNy0zLjc3NCAxLjM1MiAxLjMzOCAzLjI5MSAyLjIzNSA1LjYxOCAyLjYgMC4wMjcgMS40NjcgMC4xNjUgMi44NTEgMC40MTEgNC4xMTctMi42MS0wLjQxMy00Ljc3NC0xLjQyOS02LjI2Ni0yLjk0MXpNMTQuMjUxIDE0LjQxM2MtMC4wOTggMC4xNjUtMC4yMTYgMC4zNDEtMC4zNTcgMC41MjIgMC4zMTUgMC4wODMgMC42NDMgMC4xNTIgMC45ODIgMC4yMDYtMC4yMTQgMS40OTEtMC4zNDIgMy4wNzQtMC4zNDIgNC42MzctMi4yODUtMC4zNi00LjE4MS0xLjI0OC01LjQ5LTIuNTcgMC4yNDMtMC45NTUgMC41OTctMS45NSAxLjA3Mi0yLjk2Ni0wLjA3OC0wLjE0OS0wLjE0NC0wLjI4Ni0wLjE5NS0wLjQwNi0wLjQ4NSAwLjk3LTAuODkgMS45ODctMS4xNzkgMy4wNTAtMS4yMzctMS40MTYtMS43NDctMy4xNjItMS40NzgtNS4wNTYgMC40NTEtMS4wMjYgMS4xMzEtMS45NSAxLjk0Mi0yLjczOS0wLjEyIDEuMDU5IDAuMDc1IDIuMDU0IDAuNTY1IDIuOTM0IDAuMDYxLTAuMjEzIDAuMTQ5LTAuNDE0IDAuMjU5LTAuNi0wLjQxLTAuODE5LTAuNTU0LTEuNzM4LTAuNDE5LTIuNzA5IDAuOTItMC44MDYgMi4wMTYtMS40ODUgMy4yNTYtMi4wMjEtMC4wODggMC43OTQgMC4xMzggMS41MjUgMC42NTkgMi4xMjUtMC40MjcgMC40MzUtMC44MzIgMC44ODgtMS4yMTYgMS4zNTQgMC4xMTQgMC4wMDMgMC4yMjYgMC4wMTQgMC4zMzYgMC4wMzIgMC4zMzMtMC40MTQgMC42ODMtMC44MTggMS4wNTAtMS4yMDggMC41NjMgMC41NTIgMS4zNjMgMC45MjYgMi4zMjIgMS4wODMtMC40NDUgMS40MTEtMC43OTggMi45MTctMS4wNTEgNC40NzUtMC4yNDUtMC4wMzgtMC40ODMtMC4wODYtMC43MTUtMC4xNDJ6TTE1LjI2NiAxNS4xOTVjMS44MzcgMC4yMjIgMy43NjUtMC4wMDYgNS41MzMtMC41NTIgMC4yMTkgMC43MTIgMC44MjQgMi42NTQgMS40MTEgNC40ODMtMi4yNzQgMC43MDQtNC43ODkgMS4wMTQtNy4yMDMgMC43MTctMC4wMjItMS41NiAwLjA3Mi0zLjEwNiAwLjI1OS00LjY0OHpNMjMuNzEyIDIzLjcxNGMtMi42MTMgMC44MS01LjQ4OCAxLjE1OC04LjIzNCAwLjgxOC0wLjI1Ni0xLjI2Ny0wLjQxLTIuNjU0LTAuNDU4LTQuMTI1IDIuNDQgMC4yOTggNS4wMDYtMC4wMDYgNy4zNjUtMC43MzYgMC40NTQgMS40MTEgMC45MDEgMi43NzEgMS4zMjggNC4wNDN6TTIyLjcwOSAxOC45NjVjLTAuNTM0LTEuNTc4LTEuMDE5LTMuMDE4LTEuNTAxLTQuNDU0IDEuODExLTAuNjE4IDMuNjExLTEuNjI5IDUuMDI3LTIuOTc2IDEuMDgzIDEuMTI1IDIuMTA2IDIuMzI1IDMuMDE2IDMuNTU1LTEuODM1IDEuNzUyLTQuMTc5IDMuMDcyLTYuNTQyIDMuODc1ek0yNi41MiAxMS4yNTNjMS4yMjEtMS4yNSAyLjAwMi0yLjY0NSAyLjI2Mi00LjA0NSAxLjMyNSAwLjYwNiAyLjU5MiAxLjM0OSAzLjc0NyAyLjI2NC0wLjMyMyAxLjgyMi0xLjMzNiAzLjY0My0yLjkzMyA1LjI3NS0wLjkzOS0xLjIyOS0xLjk3LTIuMzg5LTMuMDc3LTMuNDk0ek0zMi4xMzEgMTguNzJjLTAuNTg2LTEuMTU0LTEuMzI1LTIuMzM4LTIuMTk1LTMuNTIyIDEuNjI5LTEuNjYxIDIuNjctMy41MTcgMy4wMTgtNS4zNzkgMS4wMzAgMC44OCAxLjg4IDEuODQ2IDIuNTIyIDIuODcyLTAuMzY1IDIuMDgyLTEuNTIyIDQuMTY1LTMuMzQyIDYuMDI5eiI+PC9wYXRoPgo8cGF0aCBkPSJNMzYuODI0IDE3Ljc1Yy0wLjA5OCAwLjE2OC0wLjM2MyAwLjYyMS0wLjQyNiAwLjcyNi0wLjE3OCAwLjI5Ni0wLjM0NiAwLjU2OC0wLjUwNCAwLjgxOGwtMC4xNTUgMC4yNDJjLTEuMDQyIDEuNjA1LTEuNjM0IDIuMTkyLTEuNjM1IDIuMTk0LTAuMDM0IDAuMDM1LTAuMDUxIDAuMDU0LTAuMDUxIDAuMDU0djBjLTAuMDQwIDAuMDQ2LTAuMDgzIDAuMDkzLTAuMTI1IDAuMTM5IDAuMDQwIDAuMTM5IDAuMDY5IDAuMjgyIDAuMDkwIDAuNDI3IDAuMzIyLTAuMzU3IDAuNjIxLTAuNzIyIDAuODk2LTEuMDkxIDAuMDA1LTAuMDA1IDAuMDEwLTAuMDExIDAuMDE4LTAuMDIyIDAuMDIyLTAuMDMwIDAuMDQ1LTAuMDYxIDAuMDY3LTAuMDkxIDAuMDAyLTAuMDAyIDAuMDAzLTAuMDA1IDAuMDA1LTAuMDA2IDAuOTg2LTEuMzQ3IDEuNTA2LTIuMzAyIDEuNzItMi43MzQtMC4zMTUgMS44NC0xLjA0MiAzLjc4MS0xLjc3NCA0Ljk3OS0wLjExOCAwLjE5NS0wLjM3OCAwLjU2Ni0wLjczIDAuOTk3IDAuMTQ0IDAuMDExIDAuMjc4IDAuMDU0IDAuMzk3IDAuMTIyIDEuMzk3LTIuMTM4IDIuMjc4LTQuNjIyIDIuNDk2LTcuMjU2LTAuMDk4IDAuMTc0LTAuMTkyIDAuMzQyLTAuMjg1IDAuNTA0eiI+PC9wYXRoPgo8L3N2Zz4K');
+    --data-image-limit-earth02: url('data:image/svg+xml;base64,PCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjQzIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgNDMgMzIiPgo8dGl0bGU+ZWFydGgwMjwvdGl0bGU+CjxwYXRoIGQ9Ik0xMi4yMyAxMC41OWMtMS4xODEgMC0yLjEzOCAwLjk1Ny0yLjEzOCAyLjEzOCAwIDAuMzE4IDAuMDcwIDAuNjE5IDAuMTk1IDAuODkxIDAuMjI3IDAuNTQ5IDAuNzg5IDEuNjA1IDEuOTQ0IDIuMjM3IDEuNjk4LTEuMDI2IDIuMDY2LTIuNTcgMi4wNzAtMi41OTQgMC4wNDMtMC4xNzEgMC4wNjctMC4zNSAwLjA2Ny0wLjUzNCAwLTEuMTgxLTAuOTU3LTIuMTM4LTIuMTM4LTIuMTM4ek0xMi4yMyAxMy43MTJjLTAuNjQ4IDAtMS4xNzMtMC41MjUtMS4xNzMtMS4xNzNzMC41MjUtMS4xNzMgMS4xNzMtMS4xNzNjMC42NDggMCAxLjE3MyAwLjUyNSAxLjE3MyAxLjE3M3MtMC41MjUgMS4xNzMtMS4xNzMgMS4xNzN6Ij48L3BhdGg+CjxwYXRoIGQ9Ik0zNC41OSAyNS4zMjhjMC0wLjI0OC0wLjIwMi0wLjQ0OC0wLjQ0OC0wLjQ0OGgtMC41OTh2LTIuMDkzYzAtMS40ODYtMS4yMDUtMi42OTEtMi42OTEtMi42OTFzLTIuNjkxIDEuMjA1LTIuNjkxIDIuNjkxdjAuMjkzbDAuMDk0LTAuMDU2IDAuMzU3LTAuMjExIDAuNDY5LTAuMjk4YzAuMTMxLTAuODYyIDAuODcyLTEuNTIzIDEuNzcxLTEuNTIzIDAuNDA2IDAgMC43NzkgMC4xMzYgMS4wODAgMC4zNjUgMC4wMDUgMC4wMDMgMC4wMTAgMC4wMDYgMC4wMTQgMC4wMTEgMC4wMzUgMC4wMjcgMC4wNjkgMC4wNTYgMC4xMDIgMC4wODUgMC4wMDggMC4wMDYgMC4wMTQgMC4wMTMgMC4wMjEgMC4wMTkgMC4wMzAgMC4wMjkgMC4wNjEgMC4wNTkgMC4wOTAgMC4wOTAgMC4wMDggMC4wMDggMC4wMTYgMC4wMTYgMC4wMjIgMC4wMjYgMC4wMjcgMC4wMzAgMC4wNTQgMC4wNjIgMC4wODAgMC4wOTYgMC4wMDYgMC4wMDggMC4wMTMgMC4wMTggMC4wMTkgMC4wMjcgMC4wMjYgMC4wMzQgMC4wNTEgMC4wNjkgMC4wNzUgMC4xMDYgMCAwLjAwMiAwLjAwMiAwLjAwMiAwLjAwMiAwLjAwM3MwLjAwMiAwLjAwMyAwLjAwMiAwLjAwM2MwLjE3OSAwLjI3OCAwLjI4MyAwLjYxIDAuMjgzIDAuOTY1djIuMDkzaC0zLjU4N3YtMC4yOTNjLTAuMDUwIDAuMDI3LTAuMDk4IDAuMDUzLTAuMTQ3IDAuMDgwLTAuMDAyIDAuMDAyLTAuMDAzIDAuMDAyLTAuMDA1IDAuMDAzLTAuNjA4IDAuMzE3LTEuMjEgMC41OTUtMS43OTcgMC44MzhsLTAuMTQ0IDUuMjAzYzAgMC4yNDggMC4yMDIgMC40NDggMC40NDggMC40NDhoNi44NzdjMC4yNDggMCAwLjQ0OC0wLjIwMiAwLjQ0OC0wLjQ0OGwtMC4xNDktNS4zODJ6TTMxLjMwMSAyNy40NDZ2MC44NzJjMCAwLjI0OC0wLjIgMC40NDgtMC40NDggMC40NDhzLTAuNDQ4LTAuMjAyLTAuNDQ4LTAuNDQ4di0wLjg3MmMtMC4yNjctMC4xNTUtMC40NDgtMC40NDItMC40NDgtMC43NzMgMC0wLjQ5NiAwLjQwMi0wLjg5OCAwLjg5OC0wLjg5OHMwLjg5OCAwLjQwMiAwLjg5OCAwLjg5OGMwIDAuMzMxLTAuMTgxIDAuNjE4LTAuNDQ4IDAuNzczeiI+PC9wYXRoPgo8cGF0aCBkPSJNMzcuODg1IDkuNTc0Yy0wLjA4Ni0wLjU0OS0wLjIxOC0xLjA3NS0wLjM3OS0xLjU3MS0wLjE2NS0wLjQ5Ni0wLjM2NS0wLjk2Mi0wLjU5LTEuMzg5LTAuNDUtMC44NTgtMC45OS0xLjU2NS0xLjUzNC0yLjExOC0wLjI2OS0wLjI4LTAuNTQ0LTAuNTE4LTAuODAzLTAuNzI4LTAuMjU5LTAuMjExLTAuNTA5LTAuMzg5LTAuNzM5LTAuNTM5LTAuNDY0LTAuMjk4LTAuODQ4LTAuNDk0LTEuMTE1LTAuNjE0LTAuMTMxLTAuMDY0LTAuMjM3LTAuMTA0LTAuMzA2LTAuMTMzcy0wLjEwNi0wLjA0My0wLjEwNi0wLjA0MyAwLjAzMiAwLjAyMSAwLjA5NiAwLjA2MmMwLjA2MiAwLjA0MyAwLjE1OCAwLjA5OSAwLjI3NyAwLjE4NCAwLjI0IDAuMTYzIDAuNTg2IDAuNDExIDAuOTkyIDAuNzYyIDAuNDAyIDAuMzU0IDAuODc0IDAuODAzIDEuMzI1IDEuMzg2IDAuNDU4IDAuNTc2IDAuOTAyIDEuMjggMS4yNjEgMi4wOTkgMC4zNiAwLjgxOCAwLjYyMiAxLjc1NyAwLjc0MiAyLjc3IDAuMDYyIDAuNTA3IDAuMDg1IDEuMDMyIDAuMDc4IDEuNTctMC4wMDUgMC4xMzQtMC4wMDggMC4yNjktMC4wMTMgMC40MDUtMC4wMTAgMC4xMzYtMC4wMTkgMC4yNzItMC4wMjkgMC40MS0wLjAyNyAwLjI3NC0wLjA0OCAwLjUzNC0wLjA5NCAwLjgyOS0wLjAxMCAwLjA3Mi0wLjAyMSAwLjE0NC0wLjAzMCAwLjIxNmwtMC4wMDIgMC4wMDgtMC4wMDMgMC4wMTEtMC4wMTMgMC4wNTEtMC4wMjQgMC4xMDJjLTAuMDM1IDAuMTM2LTAuMDYxIDAuMjc1LTAuMTAxIDAuNDExLTAuMDM4IDAuMTM2LTAuMDc1IDAuMjc0LTAuMTE1IDAuNDExLTAuMDQzIDAuMTM2LTAuMDg4IDAuMjcyLTAuMTMxIDAuNDEtMC4xODcgMC41NDQtMC40MTQgMS4wODMtMC42NzggMS42MDgtMC41MjMgMS4wNTYtMS4yMSAyLjA1MC0xLjk5OCAyLjk1NGwtMC4zMDIgMC4zMzNjLTAuMTAxIDAuMTA5LTAuMjA2IDAuMjExLTAuMzA5IDAuMzE4LTAuMDk5IDAuMTA2LTAuMjE4IDAuMjEzLTAuMzI4IDAuMzE4bC0wLjE2MiAwLjE1MmMwLjI0MiAwLjE3OCAwLjQ1NiAwLjM4OSAwLjYzOCAwLjYyNmwwLjEzMS0wLjEyYzAuMTE1LTAuMTA2IDAuMjI5LTAuMjAzIDAuMzQ2LTAuMzIgMC4xMTUtMC4xMTQgMC4yMzQtMC4yMjYgMC4zNDYtMC4zNDFsMC4zMy0wLjM0OWMwLjQzLTAuNDc0IDAuODI3LTAuOTc4IDEuMTk0LTEuNTAxczAuNjk0LTEuMDcwIDAuOTc5LTEuNjM1YzAuMjg1LTAuNTYzIDAuNTMxLTEuMTQyIDAuNzM2LTEuNzMgMC4wNDgtMC4xNDcgMC4wOTYtMC4yOTQgMC4xNDQtMC40NDIgMC4wNDUtMC4xNDcgMC4wODUtMC4yOTYgMC4xMjUtMC40NDUgMC4wNDMtMC4xNDcgMC4wNzAtMC4yOTggMC4xMDctMC40NDZsMC4wMjYtMC4xMSAwLjAxMy0wLjA1NiAwLjAwMy0wLjAxNGMwLjAwMy0wLjAxOS0wLjAwMyAwLjAyNCAwLjAwOC0wLjA0NmwwLjAwMy0wLjAyN2MwLjAxMC0wLjA3MiAwLjAxOS0wLjE0NCAwLjAyOS0wLjIxNiAwLjE2Ni0xLjE5IDAuMTU4LTIuMzczLTAuMDE4LTMuNDY5eiI+PC9wYXRoPgo8cGF0aCBkPSJNMjUuNTQyIDI1LjU0OWMxLjAzMC0wLjMzIDIuMDgzLTAuNzgyIDMuMTM0LTEuMzI2IDEuMDQzLTAuNTU3IDIuMDkwLTEuMjA1IDMuMDY3LTEuOTc2IDAuMDY2LTAuMDUxIDAuMTMxLTAuMTA0IDAuMTk1LTAuMTU1LTAuMTYyLTAuMjUtMC40MDYtMC40NC0wLjY5NC0wLjUzMy0wLjAxMCAwLjAwOC0wLjAxOSAwLjAxNi0wLjAyOSAwLjAyNC0wLjExNCAwLjA5OC0wLjIzNCAwLjE4Ny0wLjM1IDAuMjc4cy0wLjIzNyAwLjE4MS0wLjM1NCAwLjI3MmMtMC4xMiAwLjA4Ni0wLjI0IDAuMTc0LTAuMzYgMC4yNjFsLTAuMTc5IDAuMTMtMC4xODIgMC4xMjVjLTAuMTIyIDAuMDgzLTAuMjQyIDAuMTY1LTAuMzYzIDAuMjQ4LTAuMTIzIDAuMDc4LTAuMjQ2IDAuMTU3LTAuMzY4IDAuMjM0bC0wLjE4MiAwLjExNy0wLjE4NiAwLjExYy0wLjEyMyAwLjA3NC0wLjI0NiAwLjE0Ni0wLjM3IDAuMjE5LTAuNDk5IDAuMjc3LTAuOTk1IDAuNTQ0LTEuNDk2IDAuNzcxLTAuMTIzIDAuMDU5LTAuMjQ4IDAuMTE3LTAuMzc0IDAuMTctMC4xMjUgMC4wNTQtMC4yNDggMC4xMS0wLjM3MSAwLjE2NS0wLjEyNSAwLjA1MS0wLjI0OCAwLjEwMi0wLjM3MSAwLjE1MnMtMC4yNDUgMC4xMDEtMC4zNyAwLjE0NmMtMC4xMjMgMC4wNDYtMC4yNDUgMC4wOTMtMC4zNjYgMC4xMzgtMC4xMjMgMC4wNDItMC4yNDUgMC4wODUtMC4zNjUgMC4xMjYtMC4yNCAwLjA4Ni0wLjQ4MyAwLjE1NS0wLjcxOCAwLjIzMi0wLjQ3NSAwLjEzOS0wLjkzOCAwLjI2NC0xLjM4NiAwLjM2OC0wLjg5NiAwLjIxMy0xLjczMyAwLjM0Ny0yLjQ3OCAwLjQzNC0wLjc0NiAwLjA5MS0xLjQwMiAwLjEzMy0xLjk0MiAwLjE0Ny0wLjI3OCAwLjAxMC0wLjUyNiAwLjAxMy0wLjc0MSAwLjAxMy0wLjIwMyAwLTAuMzc2LTAuMDAzLTAuNTE3LTAuMDA2LTAuMjkxLTAuMDEwLTAuNDQ2LTAuMDE0LTAuNDQ2LTAuMDE0czAuMDM4IDAuMDA1IDAuMTE0IDAuMDE2YzAuMDc1IDAuMDEwIDAuMTg0IDAuMDI3IDAuMzMgMC4wNDMgMC4yOSAwLjAzNCAwLjcxNSAwLjA3NSAxLjI1OSAwLjEwNCAwLjI4MiAwLjAxMyAwLjU5NSAwLjAyMSAwLjkzOCAwLjAyMSAwLjMxOCAwIDAuNjYyLTAuMDA2IDEuMDMwLTAuMDI0IDAuNzYtMC4wMzggMS42MTgtMC4xMjUgMi41NDQtMC4yODUgMC45MjgtMC4xNTcgMS45Mi0wLjQwMiAyLjk0Ny0wLjczOHoiPjwvcGF0aD4KPC9zdmc+Cg==');
+    --data-image-cones: url('data:image/svg+xml;base64,PCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzIgMzIiPgo8dGl0bGU+Y29uZXM8L3RpdGxlPgo8cGF0aCBkPSJNNC4xNzcgMjQuMzFoMC45MzlsNy42MjItMjIuNDRjMC4xMDEtMC4yOTYgMC4zNzktMC40ODQgMC42NzUtMC40ODR2MGg1LjE3NWMwLjMyOSAwIDAuNjA3IDAuMjI0IDAuNjg4IDAuNTI5bDcuNjA5IDIyLjM5NmgwLjkzOWMwLjg2NyAwIDEuNjU2IDAuMzU0IDIuMjI3IDAuOTI4IDAuNTY5IDAuNTY5IDAuOTI1IDEuMzU4IDAuOTI1IDIuMjI3djBjMCAwLjg2NS0wLjM1NiAxLjY1NC0wLjkyNyAyLjIyM2wwLjAwMiAwLjAwNGMtMC41NzEgMC41NjktMS4zNiAwLjkyMy0yLjIyNyAwLjkyM2gtMjMuNjQ2Yy0wLjg2NSAwLTEuNjU2LTAuMzU0LTIuMjI3LTAuOTIzLTAuNTY5LTAuNTc0LTAuOTI1LTEuMzYyLTAuOTI1LTIuMjI3djBjMC0wLjg2OSAwLjM1Ni0xLjY1OCAwLjkyNS0yLjIyNyAwLjU3MS0wLjU3NCAxLjM2Mi0wLjkyOCAyLjIyNy0wLjkyOHYwek04LjI2NCAxOS40NzFoMTUuNDczbC0xLjUxOS00LjQ3MmgtMTIuNDM1bC0xLjUxOSA0LjQ3MnpNMjQuNTQ1IDIxLjg1aC0xNy4wOTFsLTAuODM2IDIuNDZoMTguNzYybC0wLjgzNi0yLjQ2ek0xOS44OTIgOC4xNDdoLTcuNzgzbC0wLjYyMyAxLjgzMy0wLjg5NiAyLjY0NGgxMC44MjFsLTAuODk2LTIuNjQ0LTAuNjIzLTEuODMzek0xMi45MTcgNS43NzJoNi4xNjZsLTEuMDA2LTIuOTYyaC00LjE1NGwtMS4wMDYgMi45NjJ6TTI3LjgyMyAyNS43MzVoLTIzLjY0NmMtMC40NzMgMC0wLjkwNyAwLjE5Ny0xLjIxOSAwLjUxMS0wLjMxMSAwLjMwOS0wLjUwOSAwLjc0NC0wLjUwOSAxLjIxOXYwYzAgMC40NzUgMC4xOTcgMC45MDUgMC41MDkgMS4yMTlzMC43NDYgMC41MDcgMS4yMTkgMC41MDdoMjMuNjQ2YzAuNDc1IDAgMC45MDUtMC4xOTcgMS4yMTktMC41MDdoMC4wMDJjMC4zMTEtMC4zMDkgMC41MDYtMC43NDQgMC41MDYtMS4yMTl2MGMwLTAuNDc1LTAuMTk3LTAuOTEtMC41MDgtMS4yMTktMC4zMTQtMC4zMTQtMC43NDQtMC41MTEtMS4yMTktMC41MTF6Ij48L3BhdGg+Cjwvc3ZnPgo=');
+    --data-image-wrench: url('data:image/svg+xml;base64,PCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzIgMzIiPgo8dGl0bGU+d3JlbmNoPC90aXRsZT4KPHBhdGggZD0iTTMwLjUyOSA3LjE4N2MwLjA2MCAwLjMzMyAwLjEwNyAwLjY3NCAwLjEzNyAxLjAxNSAwLjAzMCAwLjM1NSAwLjA0NyAwLjcxMyAwLjA0NyAxLjA2NyAwIDEuNDM4LTAuMjYgMi44MjktMC43MjYgNC4xMTctMC40MzkgMS4yMTItMS4wNzEgMi4zMzQtMS44NTIgMy4zMjhsMC40ODIgMC40ODJjMC40NDQgMC40NDQgMC40NDQgMS4xNjEgMCAxLjYwNC0wLjAzOSAwLjAzOC0wLjA3NyAwLjA3My0wLjEyNCAwLjEwNy0wLjg4MyAwLjczNC0xLjg5NCAxLjMyMy0yLjk5NSAxLjcyNC0xLjA4OCAwLjM5Mi0yLjI1OCAwLjYxLTMuNDY3IDAuNjEtMC44MTUgMC0xLjYxOS0wLjEwMi0yLjM5My0wLjI5LTAuNTE1LTAuMTI0LTEuMDE0LTAuMjktMS40OTYtMC40OTFsLTkuMjM2IDkuMjM4Yy0wLjg2OCAwLjg2Ni0yLjAxNCAxLjMwMS0zLjE1OCAxLjMwMXMtMi4yOTEtMC40MzUtMy4xNTktMS4zMDFsLTAuMDU2LTAuMDY0Yy0wLjgzLTAuODYyLTEuMjQ2LTEuOTgtMS4yNDYtMy4wOTggMC0xLjE0MyAwLjQzNS0yLjI5MSAxLjMwMS0zLjE1N2w5LjY2LTkuNjU2Yy0wLjA3OS0wLjMwMy0wLjE0NS0wLjYxNC0wLjE5Ny0wLjkzMWgtMC4wMDJjLTAuMDkyLTAuNTU1LTAuMTQxLTEuMTE0LTAuMTQxLTEuNjcyIDAtMS4zNjUgMC4yNzMtMi42NzYgMC43Ny0zLjg3bDAuMDI4LTAuMDY0YzAuNTEyLTEuMjE2IDEuMjU1LTIuMzA0IDIuMTY2LTMuMjE3bDAuMDAyLTAuMDA0aC0wLjAwMmMwLjkyNi0wLjkyNiAyLjA0MS0xLjY3NyAzLjI4Ny0yLjE5M2wtMC4wMDItMC4wMDRjMS4xOTctMC40OTUgMi41MDctMC43NjggMy44NzItMC43NjggMC45NjIgMCAxLjkwNSAwLjEzNyAyLjc5NyAwLjM5MyAwLjkxMyAwLjI2IDEuNzggMC42NTMgMi41NzMgMS4xNTIgMC41MjkgMC4zMzMgMC42ODcgMS4wMjkgMC4zNTQgMS41NTctMC4wNDMgMC4wNjgtMC4wOTQgMC4xMzctMC4xNTMgMC4xOTJsLTUuOTQyIDUuOTQ0IDAuNjI3IDAuNjI3IDAuOTk2IDEuMDAzIDUuMzI1LTUuMzI1YzAuNDQ0LTAuNDQ0IDEuMTYxLTAuNDQ0IDEuNjA0IDAgMC4xOCAwLjE3OSAwLjI4NyAwLjQxIDAuMzE2IDAuNjQ0djB6TTUuMDM2IDI1LjYwN2MtMC40NTQgMC40NTctMC40NTQgMS4xOSAwIDEuNjQzIDAuNDU0IDAuNDU3IDEuMTg5IDAuNDU3IDEuNjQzIDAgMC40NTQtMC40NTIgMC40NTQtMS4xODYgMC0xLjY0My0wLjQ1NC0wLjQ1Mi0xLjE4OS0wLjQ1Mi0xLjY0MyAwdjB6TTE3LjU3MiAxMC44NDNsLTIuMTcgMi4xNzJjLTAuMjYzIDAuMjY0LTAuMjYgMC42OTEgMC4wMDIgMC45NTYgMC4yNjYgMC4yNjQgMC42OTMgMC4yNjQgMC45NTgtMC4wMDRsMi4xNy0yLjE2OGMwLjI2My0wLjI2NCAwLjI2My0wLjY5NS0wLjAwNC0wLjk1Ni0wLjI2My0wLjI2NC0wLjY5NC0wLjI2NC0wLjk1NiAwdjB6TTE5LjYzMSAxMi45bC0yLjE3IDIuMTcyYy0wLjI2NCAwLjI2NC0wLjI2NCAwLjY5MSAwIDAuOTYgMC4yNjUgMC4yNiAwLjY5NiAwLjI2IDAuOTYgMGwyLjE3LTIuMTcxYzAuMjY0LTAuMjY1IDAuMjY0LTAuNjk2IDAtMC45NnMtMC42OTUtMC4yNjQtMC45NiAwdjB6TTIxLjY5IDE0Ljk1N2wtMi4xNzIgMi4xNzJjLTAuMjYyIDAuMjY0LTAuMjYyIDAuNjk1IDAgMC45NiAwLjI2NyAwLjI2NCAwLjY5OCAwLjI2NCAwLjk2IDBsMi4xNzQtMi4xNzJjMC4yNjQtMC4yNjQgMC4yNjQtMC42OTUgMC0wLjk2cy0wLjY5Ny0wLjI2NC0wLjk2MiAwdjB6TTcuMzA2IDI4LjA5OGw5Ljc5Ny05Ljc5M2MwLjMzNy0wLjMzNyAwLjg2OC0wLjQzNSAxLjMxNC0wLjIwNSAwLjU0OCAwLjI4NiAxLjEzOSAwLjUwOCAxLjc1MiAwLjY1NyAwLjU4NCAwLjE0NSAxLjIxMiAwLjIyMiAxLjg2MiAwLjIyMiAwLjk1MyAwIDEuODYyLTAuMTcxIDIuNjk1LTAuNDc0IDAuNDc4LTAuMTcgMC45My0wLjM4OCAxLjM1Mi0wLjY0OWwtNi44MTQtNi44MThjLTAuNDM5LTAuNDM5LTAuNDQyLTEuMTUyLTAuMDA1LTEuNTk1bDUuNjQ1LTUuNjQxYy0wLjIzLTAuMDkwLTAuNDYxLTAuMTctMC43LTAuMjM5LTAuNjg3LTAuMTkyLTEuNDE2LTAuMzAzLTIuMTc0LTAuMzAzLTEuMDY5IDAtMi4wODQgMC4yMTMtMy4wMDQgMC41OTN2MGgtMC4wMDRjLTAuOTU0IDAuMzk3LTEuODIgMC45ODEtMi41NDggMS43MTFsLTAuMDAyLTAuMDA0Yy0wLjcxMiAwLjcxNi0xLjI5MyAxLjU2Ni0xLjY4OCAyLjUwNGwtMC4wMjEgMC4wNTJjLTAuMzggMC45MjEtMC41OTEgMS45MzctMC41OTEgMy4wMDQgMCAwLjQ1MiAwLjAzNiAwLjg5MiAwLjEwNCAxLjMwMWgtMC4wMDJsMC4wMDIgMC4wMDVjMC4wNjYgMC40MDEgMC4xNjkgMC44MDIgMC4zMDMgMS4yMDMgMC4xNiAwLjQwNSAwLjA3NyAwLjg4Ny0wLjI1NCAxLjIxNmwtMTAuMTM2IDEwLjEzNGMtMC40MjcgMC40MjYtMC42NDIgMC45OTQtMC42NDIgMS41NTcgMCAwLjU1MSAwLjIwMyAxLjEwMSAwLjYgMS41MTlsMC4wNDMgMC4wNDNjMC40MjcgMC40MjMgMC45OTIgMC42NCAxLjU1NyAwLjY0czEuMTMxLTAuMjE4IDEuNTU4LTAuNjR2MHpNMjcuODY2IDEyLjYxNGMwLjMwNy0wLjg0IDAuNDk1LTEuNzQ1IDAuNTYzLTIuNjg0bC0zLjA4MCAzLjA3NiAxLjU1MyAxLjU0OWMwLjM4OC0wLjYwNiAwLjcxNi0xLjI1OSAwLjk2NC0xLjk0MnoiPjwvcGF0aD4KPC9zdmc+Cg==');
+    --black: 0, 0%, 0%;
+    --black-opacity-1: HSLA(var(--black), 0.87);
+    --black-opacity-2: HSLA(var(--black), 0.54);
+    --black-opacity-3: HSLA(var(--black), 0.38);
+    --black-opacity-4: HSLA(var(--black), 0.12);
+    --white: 0, 0%, 100%;
+    --white-opacity-1: HSLA(var(--white), 1);
+    --white-opacity-2: HSLA(var(--white), 0.7);
+    --white-opacity-3: HSLA(var(--white), 0.3);
+    --white-opacity-4: HSLA(var(--white), 0.12);
+    --grey-50: HSL(0, 0%, 98%);
+    --grey-100: HSL(0, 0%, 96%);
+    --grey-200: HSL(0, 0%, 93%);
+    --grey-300: HSL(0, 0%, 88%);
+    --grey-400: HSL(0, 0%, 74%);
+    --grey-500: HSL(0, 0%, 62%);
+    --grey-600: HSL(0, 0%, 46%);
+    --grey-700: HSL(0, 0%, 38%);
+    --grey-800: HSL(0, 0%, 26%);
+    --grey-900: HSL(0, 0%, 13%);
+    --time-machine-bg: 0, 0%, 100%;
+    --time-machine-bg-gredient-1: 217, 87%, 89%;
+    --time-machine-bg-gredient-2: 0, 0%, 100%;
+    --tm-text-goal-color: HSLA(0, 0%, 0%, 0.87);
+    --tm-text-odds-color: HSLA(0, 0%, 0%, 0.87);
+    --tm-bettype-text-title-color: HSL(217, 33%, 49%);
+    --tm-bettype-text-color: HSLA(0, 0%, 0%, 0.87);
+    --tm-oddsbox-text: HSLA(0, 0%, 0%, 0.87);
+    --tm-oddsbox-border: 0, 0%, 0%, 0.12;
+    --tm-oddsbox-bg: 0, 0%, 100%;
+    --tm-oddsbox-change-up-color: 91, 100%, 32%;
+    --tm-oddsbox-change-down-color: 0, 100%, 46%;
+    --tm-oods-minus: 0, 100%, 50%;
+    --tm-clock-time-text: HSLA(0, 0%, 0%, 0.87);
+    --tm-clock-bg: 0, 0%, 100%;
+    --tm-clock-shadow: 217, 87%, 89%;
+    --tm-slider-group-btn-icon: HSLA(0, 0%, 0%, 0.87);
+    --tm-slider-group-btn-bg: HSL(0, 0%, 100%);
+    --tm-slider-group-btn-border: 0, 0%, 0%, 0.12;
+    --tm-slider-group-btn-disabled-icon: HSLA(0, 0%, 0%, 0.12);
+    --tm-slider-group-btn-disabled-bg: HSL(0, 0%, 93%);
+    --tm-slider-bg: HSL(0, 0%, 46%);
+    --tm-slider-border: HSLA(0, 0%, 0%, 0.12);
+    --tm-slider-bar-text-title-color: HSL(0, 0%, 100%);
+    --tm-slider-info-text: HSLA(0, 0%, 0%, 0.87);
+    --tm-slider-match-time-text: HSL(0, 0%, 100%);
+    --tm-slider-match-time-bg: HSL(0, 0%, 46%);
+    --tm-slider-match-time-arrow: HSL(0, 0%, 46%);
+    --tm-btn-bar-text: HSLA(0, 0%, 0%, 0.87);
+    --tm-btn-bar-disabled-text: HSLA(0, 0%, 0%, 0.38);
+    --tm-btn-bar-bg: 0, 0%, 90%;
+    --tm-pointer-mask-gredient-1: 217, 87%, 89%;
+    --tm-pointer-mask-gredient-2: 0, 0%, 100%;
+    --tm-special-pointer-mask-gredient-1: 120, 100%, 35%;
+    --tm-special-pointer-mask-gredient-2: 120, 100%, 10%;
+    --tm-preloader-circle: 262, 100%, 50%;
+    --tm-preloader-bg: 0, 0%, 100%;
+}
+
+[data-view*='asiaview'] {
+    --c-av-body-font-family: '-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Segoe UI', 'Tahoma', 'Roboto',
+        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Open Sans', 'sans-serif', 'Microsoft Yahei';
+    --c-av-body-line-height: 1.15;
+    --c-av-icon-line-height: 18px;
+    --c-av-border-radius: 0.1875rem;
+    --c-av-overlay-1: rgba(0, 0, 0, 0.7);
+    --c-av-overlay-2: rgba(0, 0, 0, 0.35);
+    --c-av-box-shadow-down: 0 2px 4px rgba(0, 0, 0, 0.42);
+    --c-av-box-shadow-up: 0 -2px 4px rgba(0, 0, 0, 0.42);
+    --c-av-box-shadow-1: 0 0 4px rgba(0, 0, 0, 0.42);
+    --c-av-box-shadow-2: 0px 0px 6px rgba(0, 0, 0, 0.87);
+    --c-av-box-multi-shadow: 0px 4px 4px rgba(0, 0, 0, 0.22), 0px 16px 24px rgba(0, 0, 0, 0.12),
+        0px 6px 30px rgba(0, 0, 0, 0.1);
+    --c-av-side-nav-box-shadow: 0 0 0.1rem 0 rgba(0, 0, 0, 0.4);
+    --c-av-font-xs: 0.75rem;
+    --c-av-font-sm: 0.8125rem;
+    --c-av-font-md: 0.875rem;
+    --c-av-font-lg: 1rem;
+    --c-av-font-xl: 1.125rem;
+    --c-av-font-2xl: 1.25rem;
+    --c-av-font-3xl: 1.375rem;
+    --c-av-header-height: 101px;
+    --c-av-odds-page-header-height: 40px;
+}
+
+[data-view*='asiaview'] body {
+    height: 100%;
+    font-family: var(--c-av-body-font-family);
+    font-weight: 400;
+    line-height: var(--c-av-body-line-height);
+    color: var(--c-av-body-text);
+    display: flex;
+    flex-direction: column;
+}
+[data-view='asiaview'] [role='asiaview2022-visible'] {
+    display: none !important;
+}
+[data-view*='asiaview'] .c-icon {
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    flex: 0 0 auto;
+    display: inline-flex;
+    position: relative;
+    align-self: center;
+}
+[data-view='asiaview2022'] .c-bettype-group__btn-collapse::before,
+[data-view='asiaview2022'] .c-bettype__btn-collapse::before,
+[data-view='asiaview2022'] .c-dropdown__btn::after,
+[data-view='asiaview2022'] .c-icon--arrow-down::before,
+[data-view='asiaview2022'] .c-icon--caret::before,
+[data-view='asiaview2022'] .c-league__btn-collapse::before,
+[data-view='asiaview2022'] .c-match__btn-collapse::before,
+[data-view='asiaview2022'] .c-odds-table__btn-collapse::before,
+[data-view='asiaview2022'] .c-widget--showing-now .c-streaming-schedule .c-streaming-list > a::before,
+[data-view='asiaview2022']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    [data-view='asiaview']
+    .c-streaming-list
+    > a::before,
+[data-view='asiaview2022'] [data-view='asiaview'] .c-match__btn-collapse::before,
+[data-view='asiaview'] .c-bettype-group__btn-collapse::before,
+[data-view='asiaview'] .c-bettype__btn-collapse::before,
+[data-view='asiaview'] .c-dropdown__btn::after,
+[data-view='asiaview'] .c-icon--arrow-down::before,
+[data-view='asiaview'] .c-icon--caret::before,
+[data-view='asiaview'] .c-league__btn-collapse::before,
+[data-view='asiaview'] .c-odds-table__btn-collapse::before,
+[data-view='asiaview'] .c-widget--showing-now .c-streaming-schedule .c-streaming-list > a::before,
+[data-view='asiaview']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    [data-view='asiaview2022']
+    .c-streaming-list
+    > a::before,
+[data-view='asiaview'] [data-view='asiaview2022'] .c-match__btn-collapse::before {
+    content: '\EA07';
+}
+[data-view='asiaview2022'] .c-icon--favorite::before,
+[data-view='asiaview2022'] .c-league__btn-favorite::before,
+[data-view='asiaview2022'] .c-match__btn-favorite::before,
+[data-view='asiaview2022'] [data-view='asiaview'] .c-match__btn-favorite::before,
+[data-view='asiaview'] .c-icon--favorite::before,
+[data-view='asiaview'] .c-league__btn-favorite::before,
+[data-view='asiaview'] [data-view='asiaview2022'] .c-match__btn-favorite::before {
+    content: '\EA1D';
+}
+[data-view='asiaview2022'] .c-icon--lock::before,
+[data-view='asiaview'] .c-icon--lock::before {
+    content: '\EA2E';
+}
+[data-view='asiaview2022'] .c-icon--statistic::before,
+[data-view='asiaview'] .c-icon--statistic::before {
+    content: '\EA41';
+}
+[data-view='asiaview2022'] .c-icon--video::before,
+[data-view='asiaview'] .c-icon--video::before {
+    content: '\EA4C';
+}
+[data-view='asiaview2022'] .c-icon--betting-parlay::before,
+[data-view='asiaview'] .c-icon--betting-parlay::before {
+    content: '\EA55';
+}
+[data-view='asiaview2022'] .c-icon--cashout::before,
+[data-view='asiaview'] .c-icon--cashout::before {
+    content: '\EA6D';
+}
+[data-view='asiaview2022'] .c-icon--score-map::before,
+[data-view='asiaview'] .c-icon--score-map::before {
+    content: '\EA73';
+}
+[data-view='asiaview2022'] .c-icon--time-machine::before,
+[data-view='asiaview'] .c-icon--time-machine::before {
+    content: '\EA75';
+}
+[data-view='asiaview2022'] .c-icon--gv::before,
+[data-view='asiaview'] .c-icon--gv::before {
+    content: '\EA81';
+}
+[data-view*='asiaview'] .c-icon + .c-text,
+[data-view*='asiaview'] .c-icon + [class^='c-text-'],
+[data-view*='asiaview'] [class*='c-iconcolor'] + .c-text,
+[data-view*='asiaview'] [class*='c-iconcolor'] + [class^='c-text-'] {
+    margin-left: 0.25rem;
+}
+[data-view*='asiaview'] .c-icon::before {
+    line-height: var(--c-av-icon-line-height);
+    font-size: var(--c-av-font-xl);
+}
+[data-view='asiaview2022']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    [data-view='asiaview']
+    .c-streaming-list
+    > a::before,
+[data-view='asiaview'] .c-dropdown__btn::after,
+[data-view='asiaview'] .c-icon--caret::before,
+[data-view='asiaview'] .c-widget--showing-now .c-streaming-schedule .c-streaming-list > a::before {
+    font-size: var(--c-av-font-2xl);
+    line-height: 0.875rem;
+}
+[data-view*='asiaview'] .c-icon--caret::before,
+[data-view*='asiaview'] [data-view='asiaview2022'] .c-dropdown__btn::after,
+[data-view*='asiaview']
+    [data-view='asiaview2022']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    .c-streaming-list
+    > a::before,
+[data-view*='asiaview'] [data-view='asiaview'] .c-dropdown__btn::after,
+[data-view*='asiaview']
+    [data-view='asiaview']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    .c-streaming-list
+    > a::before,
+[data-view='asiaview2022']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    [data-view*='asiaview']
+    .c-streaming-list
+    > a::before,
+[data-view='asiaview2022'] [data-view*='asiaview'] .c-dropdown__btn::after,
+[data-view='asiaview']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    [data-view*='asiaview']
+    .c-streaming-list
+    > a::before,
+[data-view='asiaview'] [data-view*='asiaview'] .c-dropdown__btn::after {
+    transition: transform 0.2s;
+}
+[data-view*='asiaview'] .c-icon--cashout::before {
+    border-radius: 50%;
+}
+[data-view='asiaview'] .c-league__btn-collapse::before,
+[data-view='asiaview'] .c-odds-table__btn-collapse::before {
+    font-size: var(--c-av-font-xl);
+    font-family: iconfont-classic;
+}
+[data-view*='asiaview'] .c-btn {
+    --c-av-btn-border-width: 1px;
+    flex: 0 0 auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.125rem 0.5rem;
+    min-height: 1.375rem;
+    line-height: 1;
+    border-width: var(--c-av-btn-border-width);
+    border-color: transparent;
+    border-radius: var(--c-av-border-radius);
+    outline: 0;
+    cursor: pointer;
+    transition: 0.2s;
+}
+[data-view*='asiaview'] .c-btn + .c-btn {
+    margin-left: 0.5rem;
+}
+[data-view*='asiaview'] .c-btn--favorite {
+    color: var(--c-av-match-favorite-color);
+    transition: 0.1s;
+}
+[data-view*='asiaview'] .c-btn--time-machine.c-btn {
+    color: var(--c-av-btn-time-machine-text);
+    background-color: var(--c-av-btn-time-machine-bg);
+    background-image: var(--c-av-btn-time-machine-bg-img);
+    border-color: var(--c-av-btn-time-machine-border);
+}
+[data-view*='asiaview'] .c-btn--cashout {
+    color: var(--c-av-cashout-btn-text);
+    background-color: var(--c-av-cashout-btn-bg);
+}
+[data-view*='asiaview'] .c-btn--single-match.c-icon--caret::before,
+[data-view*='asiaview'] [data-view='asiaview2022'] .c-btn--single-match.c-dropdown__btn::after,
+[data-view*='asiaview']
+    [data-view='asiaview2022']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    .c-streaming-list
+    > a.c-btn--single-match::before,
+[data-view*='asiaview'] [data-view='asiaview'] .c-btn--single-match.c-dropdown__btn::after,
+[data-view*='asiaview']
+    [data-view='asiaview']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    .c-streaming-list
+    > a.c-btn--single-match::before,
+[data-view='asiaview2022']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    [data-view*='asiaview']
+    .c-streaming-list
+    > a.c-btn--single-match::before,
+[data-view='asiaview2022'] [data-view*='asiaview'] .c-btn--single-match.c-dropdown__btn::after,
+[data-view='asiaview']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    [data-view*='asiaview']
+    .c-streaming-list
+    > a.c-btn--single-match::before,
+[data-view='asiaview'] [data-view*='asiaview'] .c-btn--single-match.c-dropdown__btn::after {
+    font-size: var(--c-av-font-md);
+    transform: rotate(-90deg);
+}
+[data-view='asiaview'] .c-btn .c-text,
+[data-view='asiaview'] .c-btn.c-icon {
+    line-height: var(--c-av-icon-line-height);
+}
+[data-view='asiaview'] .c-btn.c-is-disabled,
+[data-view='asiaview'] .c-btn[data-disabled='true'] {
+    color: var(--c-av-btn-disable-text);
+    background-color: var(--c-av-btn-disable-bg);
+    background-image: none;
+}
+[data-view*='asiaview'] .c-text,
+[data-view*='asiaview'] [class^='c-text-'] {
+    word-break: break-word;
+    font-family: var(--c-av-body-font-family);
+}
+[data-view*='asiaview'] font[color='red'] {
+    color: var(--c-av-font-red);
+}
+[data-view*='asiaview']:root {
+    --c-av-left-bar-container-width: 244px;
+    --c-av-left-bar-container-mini-width: 3.75rem;
+    --c-av-right-bar-container-width: var(--c-av-left-bar-container-width);
+    --c-av-right-bar-container-mini-width: var(--c-av-left-bar-container-mini-width);
+    --c-av-match-more-w: 54px;
+    --c-av-match-timer-w: 86px;
+    --c-av-oddstable-collapse-w: 24px;
+}
+[data-view*='asiaview'] .c-team {
+    display: inline-flex;
+    color: var(--c-av-team-text);
+}
+[data-view*='asiaview'] .c-team__info {
+    display: inline;
+}
+[data-view*='asiaview'] .c-team--favor {
+    color: var(--c-av-team-favor);
+}
+[data-view*='asiaview'] .c-team-name {
+    word-break: break-word;
+}
+[data-view*='asiaview'] .c-text-goal {
+    flex: 0 0 auto;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    white-space: nowrap;
+    color: var(--c-av-goal-text);
+}
+[data-view*='asiaview'] .c-odds {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    color: var(--c-av-odds-text);
+    font-weight: 700;
+    position: relative;
+}
+[data-view*='asiaview'] .c-odds-button .c-odds:empty {
+    padding-right: 0;
+    padding-left: 0;
+    cursor: default;
+}
+[data-view*='asiaview'] .c-odds-button .c-odds:empty::before {
+    content: '';
+    width: 0;
+    white-space: pre;
+}
+[data-view*='asiaview'] .c-text + .c-odds,
+[data-view*='asiaview'] [class^='c-text-goal'] + .c-odds {
+    justify-content: flex-end;
+    margin-left: 0.25rem;
+    min-width: 2.5rem;
+}
+[data-view*='asiaview'] .c-odds--minus,
+[data-view='asiaview'] .c-odds-button > .c-odds.c-odds--minus {
+    color: var(--c-av-odds-minus-text);
+}
+.c-close-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--c-av-close-price-text);
+}
+.c-close-price .c-icon--lock {
+    font-size: 1.25rem;
+}
+[data-sport='175'] .c-close-price .c-icon--lock {
+    font-size: 1.125rem;
+}
+.c-odds-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--c-av-odds-close-text);
+}
+[data-view='asiaview'] .c-odds-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    min-height: 1.375rem;
+    position: relative;
+    transition: 0.2s;
+}
+[data-view='asiaview'] .c-odds-button > .c-text-goal {
+    margin-left: auto;
+}
+[data-view='asiaview'] .c-odds-button > .c-text {
+    margin-left: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+[data-view='asiaview'] .c-odds-button[data-odds-status='close-price'] > .c-odds,
+[data-view='asiaview'] .c-odds-button[data-odds-status='close'] > .c-odds {
+    padding: 0;
+}
+[data-view='asiaview'] .c-odds-button[data-odds-status*='change-'] > .c-odds {
+    background-color: var(--c-av-odds-change-bg) !important;
+}
+[data-view='asiaview'] .c-match__team + .c-match__team,
+[data-view='asiaview'] .c-odds-button + .c-odds-button {
+    margin-top: 0.125rem;
+}
+[data-view='asiaview'] .c-odds-button > .c-odds {
+    justify-content: flex-end;
+    padding: 0 0.625rem 0 0.125rem;
+    min-width: 3.25rem;
+    min-height: inherit;
+    border-radius: 3px;
+    cursor: pointer;
+}
+[data-view='asiaview'] .c-odds-button[data-odds-status='change-up'] > .c-odds::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 3px 6px;
+    border-color: transparent transparent var(--c-av-odds-changed-up-bg) transparent;
+    position: absolute;
+    right: 0.15rem;
+    bottom: auto;
+}
+[data-view='asiaview'] .c-odds-button[data-odds-status='change-down'] > .c-odds::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 3px 0;
+    border-color: var(--c-av-odds-changed-down-bg) transparent transparent transparent;
+    position: absolute;
+    right: 0.15rem;
+    bottom: auto;
+}
+[data-view*='asiaview'] .c-bettype-col {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0.5rem 0.25rem;
+}
+[data-view*='asiaview'] .c-bettype-col.c-has-goal .c-odds-button {
+    justify-content: flex-end;
+}
+[data-view*='asiaview'] .c-bettype-col .c-odds-button,
+[data-view*='asiaview'] .c-odds-table--sport1.c-odds-table--hdp .c-match__odds,
+[data-view*='asiaview'] .c-odds-table--sport56 .c-match__odds,
+[data-view*='asiaview'] .c-odds-table > * {
+    width: 100%;
+}
+[data-view*='asiaview'] .c-bettype-col > .c-text {
+    text-align: center;
+}
+[data-view*='asiaview'] [class*='c-bettype-title'] .c-bettype-col {
+    display: flex;
+    padding: 0.25rem;
+    min-width: 0;
+    text-align: center;
+    border-color: var(--c-av-bettype-title-border);
+}
+[data-view*='asiaview'] [class*='c-bettype-title'] .c-bettype-col .c-text {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+[data-view*='asiaview'] .c-bettype-title {
+    flex: 0 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    border-color: var(--c-av-bettype-title-border);
+}
+[data-view*='asiaview'] [class*='c-bettype-title'] {
+    display: none;
+    color: var(--c-av-oddstable-title-text);
+    min-height: 1.625rem;
+}
+[data-view*='asiaview'] .c-league[data-open='true'] [class*='c-bettype-title'],
+[data-view*='asiaview'] .c-odds-table__header [class*='c-bettype-title'] {
+    display: flex;
+}
+[data-view*='asiaview'] .c-league {
+    border-radius: var(--c-av-border-radius);
+    border-color: var(--c-av-league-border);
+}
+[data-view*='asiaview'] .c-league__header {
+    display: flex;
+    background-color: var(--c-av-league-header-bg);
+    min-height: 1.625rem;
+    border-top-width: 1px;
+    position: relative;
+    cursor: pointer;
+}
+[data-view*='asiaview'] .c-league__info {
+    flex: 1;
+    display: flex;
+    min-height: 1.625rem;
+    color: var(--c-av-league-info-text);
+    border-right-width: 1px;
+}
+[data-view*='asiaview'] [class*='c-league__btn'] {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+[data-view*='asiaview'] .c-league__btn-collapse {
+    flex: 0 0 auto;
+    width: var(--c-av-oddstable-collapse-w);
+    color: var(--c-av-league-info-text);
+    min-height: inherit;
+    border-right-width: 1px;
+}
+[data-view*='asiaview'] .c-league__name {
+    display: flex;
+    align-items: center;
+    padding: 0.125rem;
+}
+[data-view='asiaview'] .c-league + .c-league .c-league__header {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+[data-view='asiaview'] .c-league__header {
+    border-right-width: 1px;
+}
+[data-view='asiaview'] .c-league__info {
+    border-left-width: 1px;
+    border-right-width: 0;
+}
+[data-view='asiaview'] .c-league__btn-favorite {
+    text-shadow: 0 0 1px #000;
+}
+[data-view='asiaview'] .c-league__btn-collapse {
+    color: var(--c-av-league-btn-collapse-text);
+    background-image: var(--c-av-league-btn-collapse-img);
+}
+[data-view*='asiaview'] .c-match {
+    --c-av-match-option-height: 32px;
+    background-color: var(--c-av-match-bg);
+    border-color: var(--c-av-match-border);
+}
+[data-view*='asiaview'] .c-match.c-in-play {
+    background-color: var(--c-av-match-live-bg);
+    border-color: var(--c-av-match-live-border);
+}
+[data-view*='asiaview'] .c-match.c-in-play.c-is-even {
+    background-color: var(--c-av-match-live-even-bg);
+}
+[data-view*='asiaview'] .c-match.c-is-even {
+    background-color: var(--c-av-match-even-bg);
+}
+[data-view*='asiaview'] .c-match__bets {
+    display: flex;
+    position: relative;
+    width: 100%;
+    border-top-width: 1px;
+}
+[data-view*='asiaview'] .c-match__bets:hover {
+    background-color: var(--c-av-match-hover-bg);
+}
+[data-view*='asiaview'] .c-match__timer {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0.5rem 0.25rem;
+    width: var(--c-av-match-timer-w);
+    color: var(--c-av-match-timer-text);
+    border-right-width: 1px;
+    text-align: center;
+}
+[data-view*='asiaview'] .c-match__timer .c-match-status-tag {
+    width: 85%;
+    margin: 0.25rem auto;
+}
+[data-view*='asiaview'] .c-match-score {
+    margin: 0.25rem 0;
+    font-weight: 700;
+    color: var(--c-av-match-score-text);
+}
+[data-view*='asiaview'] .c-match-score.c-is-changing {
+    border-radius: var(--c-av-border-radius);
+    animation: 1s infinite c-match-score-change;
+}
+[data-view*='asiaview'] .c-match-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+[data-view*='asiaview'] .c-match-time__minute {
+    display: flex;
+    justify-content: center;
+}
+[data-view*='asiaview'] .c-match-h-time {
+    color: var(--c-av-match-h-timer-text);
+}
+[data-view*='asiaview'] .c-odds-table .c-team__info .c-team-name,
+[data-view='asiaview'] .c-match-h-time {
+    font-weight: 700;
+}
+[data-view*='asiaview'] .c-match-timer-info {
+    display: flex;
+    flex-direction: column;
+    margin: 0.25rem 0;
+}
+[data-view*='asiaview'] .c-match__odds-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+[data-view*='asiaview'] .c-match__odds-group .c-match__many-odds,
+[data-view*='asiaview'] .c-match__odds-group .c-match__odds {
+    flex: 1 0 auto;
+}
+[data-view*='asiaview'] .c-match__odds-group + .c-match__more,
+[data-view*='asiaview'] .c-odds-table--sport1.c-odds-table--hdp .c-bettype-title .c-bettype-col:nth-last-child(3),
+[data-view*='asiaview'] .c-odds-table--sport1.c-odds-table--hdp .c-match__many-odds > div:nth-last-child(3),
+[data-view*='asiaview'] .c-odds-table--sport1.c-odds-table--hdp .c-match__odds > div:nth-last-child(3),
+[data-view*='asiaview'] .c-odds-table--sport56 .c-bettype-title .c-bettype-col:nth-last-child(3),
+[data-view*='asiaview'] .c-odds-table--sport56 .c-match__many-odds > div:nth-last-child(3),
+[data-view*='asiaview'] .c-odds-table--sport56 .c-match__odds > div:nth-last-child(3),
+[data-view='asiaview'] [class*='c-bettype-title'] .c-bettype-col + .c-bettype-col {
+    border-left-width: 1px;
+}
+[data-view*='asiaview'] .c-match__odds {
+    flex: 0 0 auto;
+    display: flex;
+}
+[data-view*='asiaview'] .c-match__odds + .c-match__odds .c-bettype-col {
+    border-top-width: 1px;
+}
+[data-view*='asiaview'] .c-match__odds--more-lines {
+    order: 1;
+    cursor: pointer;
+}
+[data-view*='asiaview'] .c-match__odds .c-btn--more-lines .c-icon--caret,
+[data-view*='asiaview']
+    .c-match__odds
+    .c-btn--more-lines
+    [data-view='asiaview2022']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    .c-streaming-list
+    > a::before,
+[data-view*='asiaview']
+    .c-match__odds
+    .c-btn--more-lines
+    [data-view='asiaview']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    .c-streaming-list
+    > a::before,
+[data-view='asiaview2022']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    [data-view*='asiaview']
+    .c-match__odds
+    .c-btn--more-lines
+    .c-streaming-list
+    > a::before,
+[data-view='asiaview']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    [data-view*='asiaview']
+    .c-match__odds
+    .c-btn--more-lines
+    .c-streaming-list
+    > a::before {
+    order: 2;
+    margin-left: 0.25rem;
+}
+[data-view*='asiaview'] .c-match__team {
+    display: flex;
+    align-items: center;
+    min-height: 1.375rem;
+}
+[data-view*='asiaview'] .c-match__team + .c-match__team {
+    margin-top: 0.25rem;
+}
+[data-view*='asiaview'] .c-match__team .c-team {
+    flex: 1;
+}
+[data-view*='asiaview'] .c-match__event {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    border-right-width: 1px;
+}
+[data-view*='asiaview'] .c-match__more {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    width: var(--c-av-match-more-w);
+    text-align: center;
+}
+[data-view*='asiaview'] .c-match__more .c-btn {
+    padding: 0.0625rem 0.25rem;
+    min-width: 2.75rem;
+    min-height: auto;
+    color: var(--c-av-match-more-btn-text);
+    line-height: 1;
+    background-color: var(--c-av-match-more-btn-bg);
+    border-width: 1px;
+    border-color: var(--c-av-match-more-btn-border);
+}
+[data-view*='asiaview'] .c-match__more .c-btn + .c-btn {
+    margin-left: 0;
+    margin-top: 0.25rem;
+}
+[data-view*='asiaview'] .c-match__more .c-btn.c-btn--more.c-icon--caret::before,
+[data-view*='asiaview'] .c-match__more [data-view='asiaview2022'] .c-btn.c-btn--more.c-dropdown__btn::after,
+[data-view*='asiaview']
+    .c-match__more
+    [data-view='asiaview2022']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    .c-streaming-list
+    > a.c-btn.c-btn--more::before,
+[data-view*='asiaview'] .c-match__more [data-view='asiaview'] .c-btn.c-btn--more.c-dropdown__btn::after,
+[data-view*='asiaview']
+    .c-match__more
+    [data-view='asiaview']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    .c-streaming-list
+    > a.c-btn.c-btn--more::before,
+[data-view='asiaview2022']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    [data-view*='asiaview']
+    .c-match__more
+    .c-streaming-list
+    > a.c-btn.c-btn--more::before,
+[data-view='asiaview2022'] [data-view*='asiaview'] .c-match__more .c-btn.c-btn--more.c-dropdown__btn::after,
+[data-view='asiaview']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    [data-view*='asiaview']
+    .c-match__more
+    .c-streaming-list
+    > a.c-btn.c-btn--more::before,
+[data-view='asiaview'] [data-view*='asiaview'] .c-match__more .c-btn.c-btn--more.c-dropdown__btn::after {
+    transform: rotate(0);
+}
+[data-view*='asiaview'] .c-match__more .c-btn.c-icon--time-machine {
+    padding: 0.25rem;
+    min-width: 1rem;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: iconfont-classic;
+    src: url('./iconfont-classic.woff') format('woff');
+}
+[data-view*='asiaview'] .c-match__more .c-btn.c-icon--time-machine::before {
+    font-size: var(--c-av-font-2xl);
+}
+[data-view*='asiaview'] .c-match__more .c-btn.c-btn--time-machine {
+    color: var(--c-av-btn-time-machine-text);
+    background-color: var(--c-av-btn-time-machine-bg);
+    background-image: var(--c-av-btn-time-machine-bg-img);
+    border-color: var(--c-av-btn-time-machine-border);
+}
+[data-view='asiaview'] .c-match {
+    margin-bottom: 1px;
+    border-width: 0 1px 1px;
+    border-radius: var(--c-av-border-radius);
+}
+[data-view='asiaview'] .c-match.c-in-play,
+[data-view='asiaview'] .c-match.c-in-play .c-bettype-col,
+[data-view='asiaview'] .c-match.c-in-play .c-match__event {
+    border-color: var(--c-av-match-live-border);
+}
+[data-view='asiaview'] .c-match__bets {
+    border-radius: none;
+}
+[data-view='asiaview'] .c-match__bets:last-child {
+    border-radius: inherit;
+}
+[data-view='asiaview'] .c-match-group > .c-match:first-child,
+[data-view='asiaview'] .c-match-group > .c-match:first-child > div:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+[data-view='asiaview'] .c-match__timer {
+    padding: 4px;
+    line-height: 1.125rem;
+}
+[data-view='asiaview'] .c-bettype-col,
+[data-view='asiaview'] .c-match__event {
+    padding: 4px;
+}
+[data-view='asiaview'] .c-match__odds + .c-match__odds .c-bettype-col {
+    border-top-width: 0;
+}
+[data-view='asiaview'] .c-match__odds + .c-match__odds--more-lines {
+    border-top-width: 1px;
+}
+[data-view='asiaview'] .c-match__icons {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-self: flex-start;
+    margin-left: 0.25rem;
+    margin-top: 0.25rem;
+}
+[data-view='asiaview'] .c-match__icons .c-btn {
+    padding: 0.25rem;
+    min-height: auto;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1;
+    color: var(--c-av-match-icons-text);
+}
+[data-view='asiaview'] .c-match__icons .c-btn.c-icon::before {
+    font-size: var(--c-av-font-xs);
+    line-height: 1;
+}
+[data-view='asiaview2022'] [data-view='asiaview'] .c-match__icons .c-btn.c-match__btn-favorite::before,
+[data-view='asiaview'] .c-match__icons .c-btn.c-btn--cashout::before,
+[data-view='asiaview'] .c-match__icons .c-btn.c-icon--favorite::before,
+[data-view='asiaview'] .c-match__icons .c-btn.c-league__btn-favorite::before,
+[data-view='asiaview'] .c-match__icons [data-view='asiaview2022'] .c-btn.c-match__btn-favorite::before {
+    font-size: var(--c-av-font-lg);
+}
+[data-view='asiaview'] .c-match__icons .c-btn + .c-btn {
+    margin-left: 0.125rem;
+}
+[data-view='asiaview'] .c-match__icons .c-btn.c-is-disabled {
+    pointer-events: none;
+    color: var(--c-av-match-icons-disabled-text);
+    background-color: var(--c-av-match-icons-disabled-bg);
+}
+[data-view='asiaview'] .c-match__icons .c-btn--video {
+    color: var(--c-av-match-icons-video-text);
+    background-color: var(--c-av-match-icons-video-bg);
+}
+[data-view='asiaview'] .c-match__icons .c-btn--gv {
+    color: var(--c-av-match-icons-gv-text);
+    background-color: var(--c-av-match-icons-gv-bg);
+}
+[data-view='asiaview'] .c-match__icons .c-btn--favorite {
+    color: var(--c-av-match-icons-favorite);
+}
+[data-view='asiaview'] .c-match__icons .c-btn.c-btn--cashout {
+    background-color: var(--c-av-cashout-btn-bg);
+    color: var(--c-av-cashout-btn-text);
+}
+[data-view='asiaview'] .c-match__icons .c-btn--score-map {
+    background-color: var(--c-av-match-icons-score-map-bg);
+}
+[data-view='asiaview'] .c-match__icons .c-btn--statistic {
+    background-color: var(--c-av-match-icons-statistic-bg);
+}
+[data-view='asiaview'] .c-match__icons .c-btn--betting-parlay {
+    background-color: var(--c-av-match-icons-betting-parlay-bg);
+}
+[data-view*='asiaview'] .c-odds-table__event::after,
+[data-view*='asiaview'] .c-odds-table__event::before {
+    content: '';
+    transform: skewX(-35deg);
+    top: 0;
+    bottom: 0;
+    background-color: var(--c-av-oddstable-header-arrow-bg);
+    z-index: 1;
+    pointer-events: none;
+}
+[data-view='asiaview'] .c-match__odds--more-lines {
+    display: flex;
+    justify-content: center;
+    padding: 0.25rem;
+    position: relative;
+    height: 28px;
+}
+[data-view='asiaview'] .c-match__odds--more-lines::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+[data-view='asiaview'] .c-match .c-btn--more-lines {
+    color: var(--c-av-btn-more-lines-text);
+    font-size: inherit;
+    z-index: 1;
+}
+[data-view='asiaview2022']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    [data-view='asiaview']
+    .c-streaming-list
+    > a.c-btn--more::before,
+[data-view='asiaview'] .c-btn--more.c-icon--caret,
+[data-view='asiaview'] .c-widget--showing-now .c-streaming-schedule .c-streaming-list > a.c-btn--more::before {
+    font-size: var(--c-av-font-xs);
+}
+[data-view='asiaview2022']
+    .c-widget--showing-now
+    .c-streaming-schedule
+    [data-view='asiaview']
+    .c-streaming-list
+    > a.c-btn--more::before,
+[data-view='asiaview'] .c-btn--more.c-dropdown__btn::after,
+[data-view='asiaview'] .c-btn--more.c-icon--caret::before,
+[data-view='asiaview'] .c-widget--showing-now .c-streaming-schedule .c-streaming-list > a.c-btn--more::before {
+    font-size: var(--c-av-font-lg);
+    width: 0.875rem;
+    margin-left: -0.125rem;
+}
+[data-view*='asiaview'] .c-odds-table {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: inherit;
+}
+[data-view*='asiaview'] .c-odds-table__header {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 1.875rem;
+    flex-flow: row wrap;
+    padding-right: 0.5rem;
+    color: var(--c-av-oddstable-header-text);
+    background-color: var(--c-av-oddstable-header-bg);
+    position: relative;
+}
+[data-view*='asiaview'] .c-odds-table__btn-collapse {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    border-right-width: 1px;
+    border-color: var(--c-av-oddstable-btn-collapse-border);
+    width: var(--c-av-oddstable-collapse-w);
+    color: var(--c-av-oddstable-btn-collapse);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+[data-view*='asiaview'] .c-odds-table__event {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0.125rem 0.375rem 0.125rem 1.875rem;
+    color: var(--c-av-odds-table-event-text);
+}
+[data-view*='asiaview'] .c-odds-table__event::before {
+    width: 460px;
+    position: absolute;
+    left: -12px;
+}
+[data-view*='asiaview'] .c-odds-table__event::after {
+    width: 10px;
+    position: absolute;
+    left: 458px;
+}
+[data-view*='asiaview'] .c-odds-table__more {
+    width: var(--c-av-match-more-w);
+    border-left-width: 1px;
+    border-color: var(--c-av-oddstable-more-border);
+}
+[data-view='asiaview'] .c-odds-table__header {
+    min-height: 1.625rem;
+    padding-right: 0;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-color: transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    overflow: hidden;
+}
+[data-view='asiaview'] .c-odds-table__header .c-odds-table__btn-collapse {
+    border-top-left-radius: 3px;
+}
+[data-view='asiaview'] .c-odds-table__event {
+    align-self: stretch;
+    border-right: 1px solid;
+    border-color: var(--c-av-bettype-title-border);
+}
+[data-view='asiaview'] .c-odds-table__event::after,
+[data-view='asiaview'] .c-odds-table__event::before {
+    display: none;
+}
+[data-view='asiaview'] .c-odds-table {
+    --c-av-bettype-col-w1: 50px;
+    --c-av-bettype-col-vw1: 3.5vw;
+    --c-av-bettype-col-w2: 68px;
+    --c-av-bettype-col-vw2: 5vw;
+    --c-av-bettype-col-w3: 80px;
+    --c-av-bettype-col-vw3: 6vw;
+    --c-av-bettype-col-w4: 94px;
+    --c-av-bettype-col-vw4: 7vw;
+    --c-av-bettype-col-w5: 107px;
+    --c-av-bettype-col-vw5: 9vw;
+    --c-av-bettype-col-w6: 124px;
+    --c-av-bettype-col-max-w1: 96px;
+    --c-av-bettype-col-max-w2: 115px;
+    --c-av-bettype-col-max-w3: 134px;
+    --c-av-bettype-col-max-w4: 153px;
+    --c-av-bettype-col-max-w5: 172px;
+}
+[data-view*='asiaview'] .c-odds-table--sport1.c-odds-table--hdp .c-bettype-col:not(.c-has-goal),
+[data-view*='asiaview'] .c-odds-table--sport56 .c-bettype-col:not(.c-has-goal) {
+    flex: 0 0 auto;
+    min-width: var(--c-av-bettype-col-w3);
+    width: var(--c-av-bettype-col-vw3);
+}
+[data-view*='asiaview'] .c-odds-table--sport1.c-odds-table--hdp .c-bettype-col.c-has-goal,
+[data-view*='asiaview'] .c-odds-table--sport56 .c-bettype-col.c-has-goal {
+    flex: 0 0 auto;
+    min-width: var(--c-av-bettype-col-w5);
+    width: var(--c-av-bettype-col-vw5);
+}
+[data-view*='asiaview']
+    .c-odds-table--sport1.c-odds-table--hdp
+    .c-match:hover
+    .c-match__many-odds
+    > div:nth-child(n + 5),
+[data-view*='asiaview'] .c-odds-table--sport1.c-odds-table--hdp .c-match:hover .c-match__odds > div:nth-child(n + 5),
+[data-view*='asiaview'] .c-odds-table--sport56 .c-match:hover .c-match__many-odds > div:nth-child(n + 5),
+[data-view*='asiaview'] .c-odds-table--sport56 .c-match:hover .c-match__odds > div:nth-child(n + 5) {
+    background-color: var(--c-av-bet-match-ht-bg-hover);
+}
+[data-view='asiaview'] .c-odds-table--sport1.c-odds-table--hdp .c-bettype-col:not(.c-has-goal),
+[data-view='asiaview'] .c-odds-table--sport56 .c-bettype-col:not(.c-has-goal) {
+    max-width: var(--c-av-bettype-col-max-w1);
+    min-width: var(--c-av-bettype-col-w2);
+    width: var(--c-av-bettype-col-vw2);
+}
+[data-view='asiaview'] .c-odds-table--sport1.c-odds-table--hdp .c-bettype-col.c-has-goal,
+[data-view='asiaview'] .c-odds-table--sport56 .c-bettype-col.c-has-goal {
+    max-width: var(--c-av-bettype-col-max-w3);
+    min-width: var(--c-av-bettype-col-w4);
+    width: var(--c-av-bettype-col-vw4);
+}
+@keyframes c-match-score-change {
+    0%,
+    100% {
+        background-color: var(--c-av-match-score-change-bg);
+    }
+    50% {
+        background-color: var(--c-av-match-score-changed-bg);
+    }
+}
+[data-view*='asiaview'] .c-match-status-tag {
+    padding: 0.125rem 0.25rem;
+    line-height: 1.15;
+    text-align: center;
+    color: var(--c-av-match-status-tag-text);
+    border-width: 1px;
+    border-color: var(--c-av-match-status-tag-border);
+}
+[data-view='asiaview'] .c-match-status-tag {
+    --c-av-match-status-tag-text: #b53f39;
+    --c-av-match-status-tag-border: #b53f39;
+}
+[data-view*='asiaview'] .c-team-name + .c-team-redcard {
+    margin-left: 0.125rem;
+}
+[data-view='asiaview'] .c-team-redcard {
+    --c-av-red-card-text: #fff;
+    --c-av-red-card-bg: #b53f39;
+}
+[data-view*='asiaview'] .c-team-redcard {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.0625rem 0.25rem;
+    color: var(--c-av-red-card-text);
+    font-weight: normal;
+    font-size: var(--c-av-font-md);
+    background-color: var(--c-av-red-card-bg);
+    border-radius: var(--c-av-border-radius);
+    transform: scale(0.75);
+    transform-origin: center left;
+}
+
+html:root {
+    --c-av-body-bg: #f1f1f5;
+    --c-av-body-text: #545454;
+    --c-av-box-shadow: 0 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.4);
+    --c-av-overlay: rgba(0, 0, 0, 0.5);
+    --c-av-font-red: #b53f39;
+    --c-av-odds-text: #01122b;
+    --c-av-cashout-btn-bg: #ffd330;
+    --c-av-cashout-btn-text: #52332c;
+    --c-av-odds-change-bg: #ffaf96;
+    --c-av-odds-changed-bg: rgba(255, 175, 150, 0.2);
+    --c-av-match-score-change-bg: var(--c-av-odds-change-bg);
+    --c-av-match-score-changed-bg: var(--c-av-odds-changed-bg);
+    --c-av-odds-even-bg: #c6d4f1;
+    --c-av-odds-even-in-play-bg: #ffccbc;
+    --c-av-bet-odds-text: #01122b;
+    --c-av-odds-minus-text: #b53f39;
+    --c-av-odds-button-border: var(--black-opacity-3);
+    --c-av-odds-changed-up-bg: #5dad00;
+    --c-av-odds-changed-down-bg: red;
+    --c-av-odds-change-bg: #ffaf96;
+    --c-av-odds-change-hover-bg: #ffc2b0;
+    --c-av-sport175-odds-hover-bg: #ffffb3;
+    --c-av-goal-text: #2e2e2e;
+    --c-av-sport50-odds-button-bg: var(--c-av-white-opacity-2);
+    --c-av-sport50-odds-button-hover-bg: var(--c-av-white-opacity-1);
+    --c-av-bettype-cricket-button-odds-selected-bg: var(--c-av-odds-selected-bg);
+    --c-av-close-price-text: rgba(0, 0, 0, 0.4);
+    --c-av-odds-close-text: rgba(0, 0, 0, 0.4);
+    --c-av-odds-bg: rgba(255, 255, 255, 0.4);
+    --c-av-odds-hover-bg: #fff;
+    --c-av-odds-selected-text: inherit;
+    --c-av-odds-selected-bg: #feec6e;
+    --c-av-odds-quickbet-open-bg: #fff;
+    --c-av-odds-in-play-bg: rgba(255, 255, 255, 0.4);
+    --c-av-odds-in-play-hover-bg: #fff;
+    --c-av-odds-heavy-bg: rgba(0, 0, 0, 0.05);
+    --c-av-odds-heavy-hover-bg: #fff;
+    --c-av-bettype-odds-button-bg: #fff;
+    --c-av-bettype-odds-button-border: #dedede;
+    --c-av-match-hover-bg: #f5eeb8;
+    --c-av-streaming-content-demo-bg: #000000;
+    --c-av-cricket-fancy-blue-1: #fff;
+    --c-av-cricket-fancy-blue-2: #e0ecff;
+    --c-av-cricket-fancy-blue-3: #adcbff;
+    --c-av-cricket-fancy-pink-1: #fff;
+    --c-av-cricket-fancy-pink-2: #ffe2e0;
+    --c-av-cricket-fancy-pink-3: #ffb1ad;
+}
+[data-view='asiaview'] [class*='c-text'] {
+    --c-av-text-danger: #b53f39;
+    --c-av-text-disabled: #545454;
+    --c-av-text-mmr-positive: blue;
+    --c-av-text-mmr-negative: red;
+    --c-av-text-back: #ffffff;
+    --c-av-text-back-bg: #78acff;
+    --c-av-text-lay: #ffffff;
+    --c-av-text-lay-bg: #d675c3;
+    --c-av-text-yes: #ffffff;
+    --c-av-text-yes-bg: #78acff;
+    --c-av-text-no: #ffffff;
+    --c-av-text-no-bg: #d675c3;
+    --c-av-text-favor: #b53f39;
+    --c-av-text-blue: #2556b3;
+    --c-av-text-red: #b53f39;
+    --c-av-text-minus: #b53f39;
+    --c-av-text-forecast-win: #5dad00;
+    --c-av-text-forecast-lose: red;
+    --c-av-text-search-result: inherit;
+    --c-av-text-search-result-bg: #feec6e;
+    --c-av-text-select-league-search-result: inherit;
+    --c-av-text-select-league-search-result-bg: #feec6e;
+}
+[data-view='asiaview'] [class*='c-team'] {
+    --c-av-team-text: #01122b;
+    --c-av-team-blue: #2556b3;
+    --c-av-team-red: #b53f39;
+    --c-av-team-favor: #b53f39;
+}
+[data-view='asiaview'] .c-btn,
+[data-view='asiaview'] .c-popup-welcome,
+[data-view='asiaview'] .c-tooltip {
+    --c-av-btn-default-text: #545454;
+    --c-av-btn-default-bg: #cdcdcd;
+    --c-av-btn-default-hover-bg: silver;
+    --c-av-btn-default-img: none;
+    --c-av-btn-default-hover-img: none;
+    --c-av-btn-default-hover-filter: none;
+    --c-av-btn-default-border-color: #cdcdcd;
+    --c-av-btn-primary-text: #fff;
+    --c-av-btn-primary-bg: transparent;
+    --c-av-btn-primary-hover-bg: transparent;
+    --c-av-btn-primary-img: linear-gradient(to bottom, #7591c1 0%, #5574a7 100%);
+    --c-av-btn-primary-hover-img: linear-gradient(to bottom, #879fc9 0%, #6582b1 100%);
+    --c-av-btn-primary-hover-filter: none;
+    --c-av-btn-primary-border-color: transparent;
+    --c-av-btn-secondary-text: #fff;
+    --c-av-btn-secondary-bg: transparent;
+    --c-av-btn-secondary-hover-bg: #ff942b;
+    --c-av-btn-secondary-img: linear-gradient(to bottom, #ff942b 0%, #f77a00 100%);
+    --c-av-btn-secondary-hover-img: none;
+    --c-av-btn-secondary-hover-filter: none;
+    --c-av-btn-secondary-border-color: transparent;
+    --c-av-btn-bet-text: #fff;
+    --c-av-btn-bet-bg: transparent;
+    --c-av-btn-bet-hover-bg: #ff942b;
+    --c-av-btn-bet-img: linear-gradient(to bottom, #ff942b 0%, #f77a00 100%);
+    --c-av-btn-bet-hover-img: var(--c-av-btn-bet-img);
+    --c-av-btn-bet-hover-filter: brightness(110%);
+    --c-av-btn-bet-border-color: transparent;
+    --c-av-btn-add-parlay-text: #fff;
+    --c-av-btn-add-parlay-bg: transparent;
+    --c-av-btn-add-parlay-hover-bg: transparent;
+    --c-av-btn-add-parlay-img: linear-gradient(to bottom, #7591c1 0%, #5574a7 100%);
+    --c-av-btn-add-parlay-hover-img: var(--c-av-btn-add-parlay-img);
+    --c-av-btn-add-parlay-hover-filter: brightness(110%);
+    --c-av-btn-add-parlay-border-color: transparent;
+    --c-av-btn-disable-text: #a3a3a3;
+    --c-av-btn-disable-bg: #cdcdcd;
+    --c-av-btn-messange-border-color: transparent;
+    --c-av-btn-focus-shadow-outline: rgba(0, 0, 0, 0.25);
+    --c-av-btn-focus-shadow-inline: #fff;
+    --c-av-btn-clear-text: #545454;
+    --c-av-btn-clear-hover-text: #fff;
+    --c-av-btn-clear-hover-bg: #7c7c7c;
+    --c-av-btn-fastmarket-text: #fff;
+    --c-av-btn-fastmarket-bg: #b53f39;
+    --c-av-btn-fastmarket-border: transparent;
+    --c-av-btn-fastmarket-hover-text: #fff;
+    --c-av-btn-fastmarket-hover-bg: #ca5d57;
+    --c-av-btn-time-machine-text: #fff;
+    --c-av-btn-time-machine-bg: transparent;
+    --c-av-btn-time-machine-bg-img: linear-gradient(to bottom, #7591c1 0%, #5574a7 100%);
+    --c-av-btn-time-machine-border: transparent;
+    --c-av-btn-time-machine-hover-text: #fff;
+    --c-av-btn-time-machine-hover-bg: transparent;
+    --c-av-btn-time-machine-hover-bg-img: linear-gradient(to bottom, #879fc9 0%, #6582b1 100%);
+    --c-av-btn-music-tv-icon-video-text: #fff;
+    --c-av-btn-music-tv-icon-video-bg: #b53f39;
+    --c-av-btn-more-lines-text: #545454;
+}
+[data-view='asiaview'] .c-match-status-tag {
+    --c-av-match-status-tag-text: #b53f39;
+    --c-av-match-status-tag-border: #b53f39;
+}
+[data-view='asiaview'] .c-league {
+    --c-av-league-border: #a3a3a3;
+    --c-av-league-header-bg: #b1b1b1;
+    --c-av-league-header-hover-bg: #b9b9b9;
+    --c-av-league-info-text: #000;
+    --c-av-league-favorite-color: #7c7c7c;
+    --c-av-league-favorite-selected: #ffd330;
+    --c-av-league-btn-collapse-text: var(--c-av-league-info-text);
+    --c-av-league-btn-collapse-img: linear-gradient(to bottom, #cdcdcd 0%, #bbb 100%);
+    --c-av-league-btn-collapse-hover-img: linear-gradient(to bottom, #d5d5d5 0%, #c3c3c3 100%);
+    --c-av-bettype-col-border: #bbb;
+}
+[data-view='asiaview'] .c-match,
+[data-view='asiaview'] .c-tooltip {
+    --c-av-match-border: #bbb;
+    --c-av-match-header-bg: inherit;
+    --c-av-match-live-border: #cea193;
+    --c-av-match-bg: #c6d4f1;
+    --c-av-match-even-bg: #e4e4e4;
+    --c-av-match-h-timer-text: #2556b3;
+    --c-av-match-live-bg: #ffccbc;
+    --c-av-match-live-even-bg: #ffddd2;
+    --c-av-match-live-hover-bg: #f5eeb8;
+    --c-av-match-event-border: #bbb;
+    --c-av-match-favorite-color: #7c7c7c;
+    --c-av-match-favorite-selected: #ffd330;
+    --c-av-match-option-button-text: #fff;
+    --c-av-match-option-button-bg: #5574a7;
+    --c-av-match-option-button-border: transparent;
+    --c-av-match-option-button-hover-text: #fff;
+    --c-av-match-option-button-hover-bg: #768fb9;
+    --c-av-match-option-button-in-play-text: #fff;
+    --c-av-match-option-button-in-play-bg: #b53f39;
+    --c-av-match-option-button-in-play-hover-text: #fff;
+    --c-av-match-option-button-in-play-hover-bg: #ca5d57;
+    --c-av-match-option-button-disable-text: #fff;
+    --c-av-match-option-button-disable-bg: #bbb;
+    --c-av-match-more-btn-text: #fff;
+    --c-av-match-more-btn-bg: #5574a7;
+    --c-av-match-more-btn-border: transparent;
+    --c-av-match-more-btn-hover-text: #fff;
+    --c-av-match-more-btn-hover-bg: #768fb9;
+    --c-av-match-icons-text: #fff;
+    --c-av-match-icons-hover-bg: #768fb9;
+    --c-av-match-icons-video-text: #fff;
+    --c-av-match-icons-video-bg: #b53f39;
+    --c-av-match-icons-video-hover-bg: #ca5d57;
+    --c-av-match-icons-gv-text: #fff;
+    --c-av-match-icons-gv-bg: #b53f39;
+    --c-av-match-icons-gv-hover-bg: #ca5d57;
+    --c-av-match-icons-favorite: #7591c1;
+    --c-av-match-icons-favorite-selected: #ffd330;
+    --c-av-match-icons-cashout-hover-bg: #fcc600;
+    --c-av-match-icons-info-bg: #5574a7;
+    --c-av-match-icons-score-map-bg: #5574a7;
+    --c-av-match-icons-statistic-bg: #5574a7;
+    --c-av-match-icons-betting-parlay-bg: #5574a7;
+    --c-av-match-row-heading-border: #bbb;
+    --c-av-match-row-heading-live-border: #cea193;
+    --c-av-match-icons-disabled-text: #fff;
+    --c-av-match-icons-disabled-bg: #bbb;
+    --c-av-match-icons-live-streamver-text: #fff;
+    --c-av-match-icons-live-streamver-bg: #b53f39;
+    --c-av-match-icons-live-streamver-border: transparent;
+    --c-av-match-icons-live-streamver-hover-text: #fff;
+    --c-av-match-icons-live-streamver-hover-bg: #ca5d57;
+}
+[data-view='asiaview'] .c-match-score {
+    --c-av-match-score-text: #b53f39;
+    --c-av-match-score-current-text: var(--c-av-match-score-text);
+}
+[data-view='asiaview'] .c-odds-table,
+[data-view='asiaview'] .c-popup-welcome {
+    --c-av-oddstable-title-text: #fff;
+    --c-av-bettype-title-border: #3b5174;
+    --c-av-oddstable-header-text: #fff;
+    --c-av-oddstable-header-bg: #5574a7;
+    --c-av-oddstable-header-dropdown-text: #fff;
+    --c-av-oddstable-header-dropdown-border: none;
+    --c-av-oddstable-btn-collapse-border: #3b5174;
+    --c-av-oddstable-btn-collapse: rgba(255, 255, 255, 0.6);
+    --c-av-oddstable-btn-collapse-hover-bg: #6582b1;
+    --c-av-odds-table-event-text: inherit;
+    --c-av-oddstable-header-arrow-bg: none;
+    --c-av-w50-oddstable-title-border: #3b5174;
+    --c-av-sport175-match-bg: HSLA(0, 0%, 100%, 0.87);
+    --c-av-sport175-match-group-bg: HSLA(0, 0%, 100%, 0.54);
+    --c-av-sport175-match-header-bg: transparent;
+    --c-av-sport175-c-text-label: #7591c1;
+    --c-av-sport175-c-text-value: HSL(0, 0%, 0%);
+    --c-av-sport175-match-c-text-id: HSL(0, 0%, 30%);
+    --c-av-sport175-odds-over-text: HSL(156, 70%, 40%);
+    --c-av-sport175-odds-under-text: HSL(340, 90%, 60%);
+    --c-av-oddstable-more-border: #3b5174;
+    --c-av-sport175-match-bettype-top-border: HSL(0, 0%, 90%);
+    --c-av-sport175-odds-button-bg: HSLA(0, 0%, 100%, 0.87);
+    --c-av-sport175-odds-button-border: HSLA(0, 0%, 0%, 0.32);
+}
+[data-view='asiaview'] {
+    --c-av-custom-scroll-bg: transparent;
+    --c-av-custom-scroll-thumb-color: rgba(0, 0, 0, 0.4);
+    --c-av-custom-scroll-thumb-border: transparent;
+    --c-av-custom-scroll-thumb-shadow: transparent;
+    --c-av-custom-scroll-thumb-color-hover: rgba(0, 0, 0, 0.4);
+}
+[data-view='asiaview'] .c-btn {
+    --c-av-bettype-btn-help-text: #fff;
+}
+[data-view*='asiaview'] {
+    --c-av-brand-color: #5473a6;
+    --c-av-brand-h: 217;
+    --c-av-brand-s: 33%;
+    --c-av-brand-l: 49%;
+    --c-av-primary-color: var(--c-av-brand-color);
+    --c-av-primary-h: var(--c-av-brand-h);
+    --c-av-primary-s: var(--c-av-brand-s);
+    --c-av-primary-l: var(--c-av-brand-l);
+    --c-av-secondary-color: #b6403a;
+    --c-av-secondary-h: 3;
+    --c-av-secondary-s: 52%;
+    --c-av-secondary-l: 47%;
+    --c-av-in-play-color-1: #fef1f0;
+    --c-av-in-play-color-2: #c2160a;
+    --c-av-in-play-color-3: #911108;
+}
+
+@media only screen and (max-width: 992px) {
+    #keo_main #wapper {
+        width: auto;
+        float: unset;
+        overflow: auto !important;
+    }
+
+    #keo_main {
+        overflow: auto !important;
+    }
+
+    [data-view='asiaview'] {
+        font-size: 11px !important;
+    }
+    [data-view='asiaview'] .c-match__timer {
+        padding: 0px !important;
+        width: 40px !important;
+    }
+    [data-view='asiaview'] .c-match__timer {
+        line-height: 18px !important;
+    }
+}
+
+.view_more_TL {
+    display: none;
+}
